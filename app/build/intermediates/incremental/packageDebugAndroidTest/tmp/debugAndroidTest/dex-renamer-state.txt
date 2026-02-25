@@ -1,0 +1,4 @@
+#Tue Feb 24 23:21:37 EET 2026
+base.0=/Users/johngamboa/Downloads/Estakada99TV 4/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/0/classes.dex
+path.0=0/classes.dex
+renamed.0=classes.dex

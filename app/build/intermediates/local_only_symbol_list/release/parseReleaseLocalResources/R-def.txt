@@ -1,0 +1,12 @@
+R_DEF: Internal format may change without notice
+local
+anim pulse
+drawable background
+drawable banner
+drawable logo
+id backgroundView
+id logoView
+id playPauseButton
+id statusText
+layout activity_main
+mipmap ic_launcher

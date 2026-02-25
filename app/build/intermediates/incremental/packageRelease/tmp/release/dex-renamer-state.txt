@@ -1,0 +1,10 @@
+#Tue Feb 24 23:55:47 EET 2026
+base.0=/Users/johngamboa/Downloads/Estakada99TV 4/app/build/intermediates/dex/release/mergeDexRelease/classes.dex
+base.1=/Users/johngamboa/Downloads/Estakada99TV 4/app/build/intermediates/global_synthetics_dex/release/mergeReleaseGlobalSynthetics/classes.dex
+base.2=/Users/johngamboa/Downloads/Estakada99TV 4/app/build/intermediates/dex/release/mergeDexRelease/classes2.dex
+path.0=classes.dex
+path.1=classes.dex
+path.2=classes2.dex
+renamed.0=classes.dex
+renamed.1=classes2.dex
+renamed.2=classes3.dex
