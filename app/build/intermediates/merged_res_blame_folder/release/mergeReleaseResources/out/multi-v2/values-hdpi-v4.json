@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.estakada99.tv.app-mergeReleaseResources-25:/values-hdpi-v4/values-hdpi-v4.xml",
+            "map": [
+                {
+                    "source": "/Users/johngamboa/.gradle/caches/8.13/transforms/9d6f1892f32dd5dbccb20201c2a05701/transformed/appcompat-1.6.1/res/values-hdpi-v4/values-hdpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "13",
+                        "endOffsets": "327"
+                    }
+                }
+            ]
+        }
+    ]
+}

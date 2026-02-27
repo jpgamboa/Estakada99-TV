@@ -30,8 +30,8 @@ class MainActivity : AppCompatActivity() {
     private val bounceHandler = Handler(Looper.getMainLooper())
     private var logoX = 100f
     private var logoY = 100f
-    private var dx = 4f
-    private var dy = 3f
+    private var dx = 2f
+    private var dy = 1.5f
 
     private val bounceRunnable = object : Runnable {
         override fun run() {

@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "com.estakada99.tv.app-debug-27:/anim_pulse.xml.flat",
+        "source": "com.estakada99.tv.app-main-29:/anim/pulse.xml"
+    },
+    {
+        "merged": "com.estakada99.tv.app-debug-27:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.estakada99.tv.app-main-29:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.estakada99.tv.app-debug-27:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.estakada99.tv.app-main-29:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.estakada99.tv.app-debug-27:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.estakada99.tv.app-main-29:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.estakada99.tv.app-debug-27:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.estakada99.tv.app-main-29:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.estakada99.tv.app-debug-27:/drawable_background.png.flat",
+        "source": "com.estakada99.tv.app-main-29:/drawable/background.png"
+    },
+    {
+        "merged": "com.estakada99.tv.app-debug-27:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.estakada99.tv.app-main-29:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.estakada99.tv.app-debug-27:/drawable_button_focus_selector.xml.flat",
+        "source": "com.estakada99.tv.app-main-29:/drawable/button_focus_selector.xml"
+    },
+    {
+        "merged": "com.estakada99.tv.app-debug-27:/layout_activity_main.xml.flat",
+        "source": "com.estakada99.tv.app-main-29:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.estakada99.tv.app-debug-27:/drawable_logo.png.flat",
+        "source": "com.estakada99.tv.app-main-29:/drawable/logo.png"
+    },
+    {
+        "merged": "com.estakada99.tv.app-debug-27:/drawable_banner.png.flat",
+        "source": "com.estakada99.tv.app-main-29:/drawable/banner.png"
+    }
+]

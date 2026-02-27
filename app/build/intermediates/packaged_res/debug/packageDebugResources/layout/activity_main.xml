@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <!-- Animated pulsing background -->
+    <ImageView
+        android:id="@+id/backgroundView"
+        android:src="@drawable/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <!-- Bouncing logo - position controlled in code -->
+    <ImageView
+        android:id="@+id/logoView"
+        android:src="@drawable/logo"
+        android:layout_width="320dp"
+        android:layout_height="80dp"
+        android:scaleType="fitCenter"
+        android:layout_gravity="top|start" />
+
+    <!-- Status / error text -->
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="200dp"
+        android:text="Connecting..."
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="4"
+        android:visibility="visible" />
+
+    <!-- Play/pause - Google TV compliant Button with focus selector -->
+    <Button
+        android:id="@+id/playPauseButton"
+        android:layout_width="120dp"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="32dp"
+        android:text="▶"
+        android:textSize="28sp"
+        android:textColor="#FFFFFF"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:background="@drawable/button_focus_selector" />
+
+    <!-- Clock bottom right -->
+    <TextClock
+        android:id="@+id/clockText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="32dp"
+        android:format12Hour="h:mm a"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="4" />
+
+</FrameLayout>
