@@ -59,6 +59,23 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    // Button auto-hide
+    private val hideHandler = Handler(Looper.getMainLooper())
+    private val hideRunnable = Runnable {
+        playPauseButton.animate()
+            .alpha(0f)
+            .setDuration(500)
+            .withEndAction { playPauseButton.visibility = View.INVISIBLE }
+            .start()
+    }
+
+    private fun showButton() {
+        hideHandler.removeCallbacks(hideRunnable)
+        playPauseButton.visibility = View.VISIBLE
+        playPauseButton.animate().alpha(1f).setDuration(300).start()
+        hideHandler.postDelayed(hideRunnable, 15000)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -76,10 +93,13 @@ class MainActivity : AppCompatActivity() {
         statusText = findViewById(R.id.statusText)
         playPauseButton = findViewById(R.id.playPauseButton)
 
+        // Start hidden
+        playPauseButton.visibility = View.INVISIBLE
+        playPauseButton.alpha = 0f
+
         val pulseAnim = AnimationUtils.loadAnimation(this, R.anim.pulse)
         backgroundView.startAnimation(pulseAnim)
 
-        // Wait for layout to be measured before starting bounce
         logoView.post {
             bounceHandler.post(bounceRunnable)
         }
@@ -150,7 +170,11 @@ class MainActivity : AppCompatActivity() {
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
         return when (keyCode) {
             KeyEvent.KEYCODE_DPAD_CENTER, KeyEvent.KEYCODE_ENTER -> {
-                togglePlayback()
+                if (playPauseButton.visibility == View.VISIBLE) {
+                    togglePlayback()
+                } else {
+                    showButton()
+                }
                 true
             }
             KeyEvent.KEYCODE_MEDIA_PLAY_PAUSE -> {
@@ -161,7 +185,10 @@ class MainActivity : AppCompatActivity() {
                 finish()
                 true
             }
-            else -> super.onKeyDown(keyCode, event)
+            else -> {
+                showButton()
+                super.onKeyDown(keyCode, event)
+            }
         }
     }
 
@@ -175,11 +202,13 @@ class MainActivity : AppCompatActivity() {
         super.onPause()
         player.playWhenReady = false
         bounceHandler.removeCallbacks(bounceRunnable)
+        hideHandler.removeCallbacks(hideRunnable)
     }
 
     override fun onDestroy() {
         super.onDestroy()
         player.release()
         bounceHandler.removeCallbacks(bounceRunnable)
+        hideHandler.removeCallbacks(hideRunnable)
     }
 }
