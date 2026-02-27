@@ -82,7 +82,6 @@ ADDED from /Users/johngamboa/Documents/Estakada99-TV/app/src/main/AndroidManifes
 application
 ADDED from /Users/johngamboa/Documents/Estakada99-TV/app/src/main/AndroidManifest.xml:13:5-37:19
 INJECTED from /Users/johngamboa/Documents/Estakada99-TV/app/src/main/AndroidManifest.xml:13:5-37:19
-INJECTED from /Users/johngamboa/Documents/Estakada99-TV/app/src/main/AndroidManifest.xml:13:5-37:19
 MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/johngamboa/.gradle/caches/8.13/transforms/58f8d170e7d40779f59e18eaa9032e34/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
 MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/johngamboa/.gradle/caches/8.13/transforms/58f8d170e7d40779f59e18eaa9032e34/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
 MERGED from [androidx.core:core:1.12.0] /Users/johngamboa/.gradle/caches/8.13/transforms/6d16127528cc01c71e060343e657166e/transformed/core-1.12.0/AndroidManifest.xml:28:5-89
@@ -99,8 +98,6 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/johngamboa/.gradle/c
 		ADDED from [androidx.core:core:1.12.0] /Users/johngamboa/.gradle/caches/8.13/transforms/6d16127528cc01c71e060343e657166e/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
 	android:label
 		ADDED from /Users/johngamboa/Documents/Estakada99-TV/app/src/main/AndroidManifest.xml:16:9-39
-	android:testOnly
-		INJECTED from /Users/johngamboa/Documents/Estakada99-TV/app/src/main/AndroidManifest.xml
 	android:icon
 		ADDED from /Users/johngamboa/Documents/Estakada99-TV/app/src/main/AndroidManifest.xml:15:9-43
 	android:allowBackup

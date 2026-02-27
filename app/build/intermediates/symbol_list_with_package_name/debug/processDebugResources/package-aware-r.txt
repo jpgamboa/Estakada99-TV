@@ -1232,6 +1232,7 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable button_focus_selector
+drawable button_text_color
 drawable exo_edit_mode_logo
 drawable exo_ic_audiotrack
 drawable exo_ic_check

@@ -52,8 +52,9 @@ class MainActivity : AppCompatActivity() {
             if (logoY <= 0f) { logoY = 0f; dy = Math.abs(dy) }
             if (logoY >= maxY) { logoY = maxY; dy = -Math.abs(dy) }
 
-            logoView.x = logoX
-            logoView.y = logoY
+            // Use translationX/Y for smoother rendering
+            logoView.translationX = logoX
+            logoView.translationY = logoY
 
             bounceHandler.postDelayed(this, 16)
         }
@@ -92,6 +93,8 @@ class MainActivity : AppCompatActivity() {
         backgroundView = findViewById(R.id.backgroundView)
         statusText = findViewById(R.id.statusText)
         playPauseButton = findViewById(R.id.playPauseButton)
+
+        logoView.setLayerType(View.LAYER_TYPE_HARDWARE, null)
 
         // Start hidden
         playPauseButton.visibility = View.INVISIBLE

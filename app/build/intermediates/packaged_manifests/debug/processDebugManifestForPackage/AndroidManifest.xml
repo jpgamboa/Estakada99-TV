@@ -33,7 +33,6 @@
         android:extractNativeLibs="true"
         android:icon="@mipmap/ic_launcher"
         android:label="Estakada 99 TV"
-        android:testOnly="true"
         android:theme="@style/Theme.AppCompat.NoActionBar" >
         <activity
             android:name="com.estakada99.tv.MainActivity"

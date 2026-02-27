@@ -4,6 +4,7 @@ anim pulse
 drawable background
 drawable banner
 drawable button_focus_selector
+drawable button_text_color
 drawable logo
 id backgroundView
 id clockText
