@@ -2,3 +2,13 @@
 ._.DS_Store
 **/.DS_Store
 **/._.DS_Store
+
+# Android build outputs
+**/build/
+*.apk
+*.aab
+
+# Keystore — never commit these
+keystore.properties
+*.jks
+*.keystore
