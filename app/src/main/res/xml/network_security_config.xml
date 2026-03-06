@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Trust system CAs for all connections (Android default behaviour) -->
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+    <!-- Explicitly allow the stream domain in case redirects or HLS segments
+         land on HTTP. Remove this once the stream is confirmed HTTPS-only. -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">e99.live</domain>
+    </domain-config>
+</network-security-config>

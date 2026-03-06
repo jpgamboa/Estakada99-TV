@@ -7,7 +7,7 @@
         android:targetSdkVersion="34" />
 
     <instrumentation
-        android:name="android.test.InstrumentationTestRunner"
+        android:name="androidx.test.runner.AndroidJUnitRunner"
         android:functionalTest="false"
         android:handleProfiling="false"
         android:label="Tests for com.estakada99.tv"
@@ -15,8 +15,6 @@
 
     <application
         android:debuggable="true"
-        android:extractNativeLibs="true" >
-        <uses-library android:name="android.test.runner" />
-    </application>
+        android:extractNativeLibs="true" />
 
 </manifest>

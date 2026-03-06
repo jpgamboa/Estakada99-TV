@@ -11,6 +11,9 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
 import androidx.media3.common.MediaItem
 import androidx.media3.common.PlaybackException
 import androidx.media3.common.Player
@@ -81,11 +84,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         window.addFlags(android.view.WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
-        window.decorView.systemUiVisibility = (
-            View.SYSTEM_UI_FLAG_FULLSCREEN or
-            View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or
-            View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-        )
+        WindowCompat.setDecorFitsSystemWindows(window, false)
 
         setContentView(R.layout.activity_main)
 
@@ -110,6 +109,7 @@ class MainActivity : AppCompatActivity() {
         playPauseButton.setOnClickListener { togglePlayback() }
 
         setupPlayer()
+        hideSystemUI()
     }
 
     private fun setupPlayer() {
@@ -168,6 +168,19 @@ class MainActivity : AppCompatActivity() {
 
     private fun updatePlayPauseButton() {
         playPauseButton.text = if (player.isPlaying) "⏸" else "▶"
+    }
+
+    private fun hideSystemUI() {
+        WindowInsetsControllerCompat(window, window.decorView).let { controller ->
+            controller.hide(WindowInsetsCompat.Type.systemBars())
+            controller.systemBarsBehavior =
+                WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+        }
+    }
+
+    override fun onWindowFocusChanged(hasFocus: Boolean) {
+        super.onWindowFocusChanged(hasFocus)
+        if (hasFocus) hideSystemUI()
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {

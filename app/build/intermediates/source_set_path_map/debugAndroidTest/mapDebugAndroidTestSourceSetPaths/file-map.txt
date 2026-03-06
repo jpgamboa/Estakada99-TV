@@ -1,5 +1,0 @@
-com.estakada99.tv.test.app-androidTest-0 /Users/johngamboa/Documents/Estakada99-TV/app/build/generated/res/resValues/androidTest/debug
-com.estakada99.tv.test.app-updated_navigation_xml-1 /Users/johngamboa/Documents/Estakada99-TV/app/build/generated/updated_navigation_xml/debugAndroidTest
-com.estakada99.tv.test.app-mergeDebugAndroidTestResources-2 /Users/johngamboa/Documents/Estakada99-TV/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
-com.estakada99.tv.test.app-mergeDebugAndroidTestResources-3 /Users/johngamboa/Documents/Estakada99-TV/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
-com.estakada99.tv.test.app-debugAndroidTest-4 /Users/johngamboa/Documents/Estakada99-TV/app/build/intermediates/merged_res/debugAndroidTest/mergeDebugAndroidTestResources

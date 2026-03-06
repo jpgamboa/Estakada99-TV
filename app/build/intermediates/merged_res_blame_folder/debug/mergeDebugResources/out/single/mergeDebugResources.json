@@ -28,6 +28,10 @@
         "source": "com.estakada99.tv.app-main-29:/drawable/logo.png"
     },
     {
+        "merged": "com.estakada99.tv.app-debug-27:/xml_network_security_config.xml.flat",
+        "source": "com.estakada99.tv.app-main-29:/xml/network_security_config.xml"
+    },
+    {
         "merged": "com.estakada99.tv.app-debug-27:/drawable_banner.png.flat",
         "source": "com.estakada99.tv.app-main-29:/drawable/banner.png"
     },

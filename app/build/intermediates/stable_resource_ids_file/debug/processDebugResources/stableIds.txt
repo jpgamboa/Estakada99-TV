@@ -2470,6 +2470,7 @@ com.estakada99.tv:attr/actionOverflowMenuStyle = 0x7f040020
 com.estakada99.tv:attr/textLocale = 0x7f0401de
 com.estakada99.tv:attr/iconTintMode = 0x7f040109
 com.estakada99.tv:attr/searchOrbColor = 0x7f0401a0
+com.estakada99.tv:xml/network_security_config = 0x7f160000
 com.estakada99.tv:layout/lb_control_button_secondary = 0x7f0e0031
 com.estakada99.tv:attr/alertDialogCenterButtons = 0x7f040028
 com.estakada99.tv:attr/buttonPanelSideLayout = 0x7f04005a
