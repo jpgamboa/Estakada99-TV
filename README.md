@@ -13,6 +13,12 @@ An Android TV app that streams the Estakada 99 live broadcast directly on your T
 - Keeps screen on during playback
 - Full system UI hidden for a clean TV experience
 
+## Screenshots
+
+![](estakada_1.png)
+![](estakada_2.png)
+![](estakada_3.png)
+
 ## Installing the App on Your TV (No Computer Needed)
 
 The easiest way to get the app on your Android TV is to sideload the APK using one of the methods below. No computer or developer tools required.
