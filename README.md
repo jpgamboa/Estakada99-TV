@@ -13,6 +13,30 @@ An Android TV app that streams the Estakada 99 live broadcast directly on your T
 - Keeps screen on during playback
 - Full system UI hidden for a clean TV experience
 
+## Installing the App on Your TV (No Computer Needed)
+
+The easiest way to get the app on your Android TV is to sideload the APK using one of the methods below. No computer or developer tools required.
+
+### Option 1 — Send Files to TV (Wireless, Recommended)
+
+1. On your Android TV, install **[Send Files to TV](https://play.google.com/store/apps/details?id=com.yablio.sendfilestotv)** from the Play Store
+2. On your phone or computer, install the same app (Android) or visit the web uploader
+3. Download the latest `app-release.apk` from the [Releases page](https://github.com/jpgamboa/Estakada99-TV/releases) to your phone
+4. Open Send Files to TV on your phone, tap **Send**, select the APK, and choose your TV
+5. On your TV, accept the incoming file — it will save to your Downloads folder
+6. Open **Files** (or any file manager on your TV), navigate to Downloads, and tap the APK to install
+7. If prompted, enable **Install from Unknown Sources** for the file manager app
+
+### Option 2 — USB Drive
+
+1. Download the latest `app-release.apk` from the [Releases page](https://github.com/jpgamboa/Estakada99-TV/releases) and copy it to a USB drive
+2. Plug the USB drive into your Android TV
+3. Open a file manager app on your TV (e.g. **FX File Explorer** or the built-in Files app)
+4. Navigate to the USB drive, tap `app-release.apk`, and follow the install prompts
+5. If prompted, enable **Install from Unknown Sources** for the file manager app
+
+---
+
 ## Requirements
 
 - Android TV device (or emulator) running Android 5.0 (API 21) or higher
