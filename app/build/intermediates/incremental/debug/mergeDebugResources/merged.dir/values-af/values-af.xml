@@ -1,22 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
-    <string-array name="exo_controls_playback_speeds">
-    <item>0,25x</item>
-    <item>0,5x</item>
-    <item>0,75x</item>
-    <item>Normaal</item>
-    <item>1,25x</item>
-    <item>1,5x</item>
-    <item>2x</item>
-  </string-array>
-    <plurals name="exo_controls_fastforward_by_amount_description">
-    <item quantity="one">Spoel %d sekonde vinnig vorentoe</item>
-    <item quantity="other">Spoel %d sekondes vinnig vorentoe</item>
-  </plurals>
-    <plurals name="exo_controls_rewind_by_amount_description">
-    <item quantity="one">Spoel %d sekonde terug</item>
-    <item quantity="other">Spoel %d sekondes terug</item>
-  </plurals>
     <string msgid="5976598919945601918" name="abc_action_bar_home_description">"Gaan na tuisskerm"</string>
     <string msgid="8388173803310557296" name="abc_action_bar_up_description">"Gaan op"</string>
     <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"Nog opsies"</string>
@@ -51,30 +34,24 @@
     <string msgid="6107532579223922871" name="call_notification_incoming_text">"Inkomende oproep"</string>
     <string msgid="8623827134497363134" name="call_notification_ongoing_text">"Oproep aan die gang"</string>
     <string msgid="59049573811482460" name="call_notification_screening_text">"Keur tans \'n inkomende oproep"</string>
-    <string name="exo_controls_cc_disabled_description">Aktiveer onderskrifte</string>
-    <string name="exo_controls_cc_enabled_description">Deaktiveer onderskrifte</string>
-    <string name="exo_controls_fastforward_description">Spoel vorentoe</string>
-    <string name="exo_controls_fullscreen_enter_description">Gaan na volskerm</string>
-    <string name="exo_controls_fullscreen_exit_description">Verlaat volskerm</string>
-    <string name="exo_controls_hide">Versteek spelerkontroles</string>
-    <string name="exo_controls_next_description">Volgende</string>
-    <string name="exo_controls_overflow_hide_description">Versteek bykomende instellings</string>
-    <string name="exo_controls_overflow_show_description">Wys bykomende instellings</string>
-    <string name="exo_controls_pause_description">Onderbreek</string>
-    <string name="exo_controls_play_description">Speel</string>
-    <string name="exo_controls_playback_speed">Spoed</string>
-    <string name="exo_controls_previous_description">Vorige</string>
-    <string name="exo_controls_repeat_all_description">Huidige modus: herhaal alles. Wissel herhaalmodus.</string>
-    <string name="exo_controls_repeat_off_description">Huidige modus: herhaal niks. Wissel herhaalmodus.</string>
-    <string name="exo_controls_repeat_one_description">Huidige modus: herhaal een. Wissel herhaalmodus.</string>
-    <string name="exo_controls_rewind_description">Spoel terug</string>
-    <string name="exo_controls_seek_bar_description">Terugspeelvordering</string>
-    <string name="exo_controls_settings_description">Instellings</string>
-    <string name="exo_controls_show">Wys spelerkontroles</string>
-    <string name="exo_controls_shuffle_off_description">Aktiveer skommelmodus</string>
-    <string name="exo_controls_shuffle_on_description">Deaktiveer skommelmodus</string>
-    <string name="exo_controls_stop_description">Stop</string>
-    <string name="exo_controls_vr_description">VR-modus</string>
+    <string name="default_notification_channel_name">Speel tans</string>
+    <string name="error_message_authentication_expired">Meld aan om hierdie app te gebruik</string>
+    <string name="error_message_bad_value">Verkeerde invoerdata</string>
+    <string name="error_message_concurrent_stream_limit">Luister tans op te veel toestelle</string>
+    <string name="error_message_content_already_playing">Speel reeds daardie inhoud</string>
+    <string name="error_message_disconnected">Ontkoppel van media-app</string>
+    <string name="error_message_end_of_playlist">Daar is niks anders op die waglys nie</string>
+    <string name="error_message_fallback">Iets is fout. Probeer later.</string>
+    <string name="error_message_info_cancelled">Kon nie voltooi word nie. Probeer weer.</string>
+    <string name="error_message_invalid_state">Kan dit nie op die oomblik doen nie</string>
+    <string name="error_message_io">Invoer-/uitvoerfout</string>
+    <string name="error_message_not_available_in_region">Kan nie daardie inhoud hier kry nie</string>
+    <string name="error_message_not_supported">Hierdie app kan dit nie doen nie</string>
+    <string name="error_message_parental_control_restricted">Daardie inhoud word geblokkeer</string>
+    <string name="error_message_permission_denied">Toegang geweier</string>
+    <string name="error_message_premium_account_required">Premiumtoegang word vereis</string>
+    <string name="error_message_setup_required">Opstelling word vereis</string>
+    <string name="error_message_skip_limit_reached">Kan nie meer snitte oorslaan nie</string>
     <string name="exo_download_completed">Aflaai is voltooi</string>
     <string name="exo_download_description">Aflaai</string>
     <string name="exo_download_downloading">Laai tans af</string>
@@ -84,25 +61,6 @@
     <string name="exo_download_paused_for_network">Aflaaie wag tans vir netwerk</string>
     <string name="exo_download_paused_for_wifi">Aflaaie wag tans vir wi-fi</string>
     <string name="exo_download_removing">Verwyder tans aflaaie</string>
-    <string name="exo_item_list">%1$s, %2$s</string>
-    <string name="exo_track_bitrate">%1$.2f Mbps</string>
-    <string name="exo_track_mono">Mono</string>
-    <string name="exo_track_resolution">%1$d × %2$d</string>
-    <string name="exo_track_role_alternate">Afwisselend</string>
-    <string name="exo_track_role_closed_captions">Onderskrifte</string>
-    <string name="exo_track_role_commentary">Kommentaar</string>
-    <string name="exo_track_role_supplementary">Aanvullend</string>
-    <string name="exo_track_selection_auto">Outo</string>
-    <string name="exo_track_selection_none">Geen</string>
-    <string name="exo_track_selection_title_audio">Oudio</string>
-    <string name="exo_track_selection_title_text">Teks</string>
-    <string name="exo_track_selection_title_video">Video</string>
-    <string name="exo_track_stereo">Stereo</string>
-    <string name="exo_track_surround">Omringklank</string>
-    <string name="exo_track_surround_5_point_1">5.1-omringklank</string>
-    <string name="exo_track_surround_7_point_1">7.1-omringklank</string>
-    <string name="exo_track_unknown">Onbekend</string>
-    <string name="exo_track_unknown_name">Onbekend (%1$s)</string>
     <string msgid="2721825378927619928" name="lb_control_display_fast_forward_multiplier">"%1$dX"</string>
     <string msgid="6173753802428649303" name="lb_control_display_rewind_multiplier">"%1$dX"</string>
     <string msgid="1122271825827282965" name="lb_guidedaction_continue_title">"Gaan voort"</string>
@@ -141,6 +99,12 @@
     <string msgid="2795474673510974502" name="lb_search_bar_hint_speech">"Praat om te soek"</string>
     <string msgid="7453744869467668159" name="lb_search_bar_hint_with_title">"Deursoek <ns1:g id="SEARCH_CONTEXT">%1$s</ns1:g>"</string>
     <string msgid="5851694095153624617" name="lb_search_bar_hint_with_title_speech">"Praat om <ns1:g id="SEARCH_CONTEXT">%1$s</ns1:g> te deursoek"</string>
+    <string name="media3_controls_pause_description">Onderbreek</string>
+    <string name="media3_controls_play_description">Speel</string>
+    <string name="media3_controls_seek_back_description">Soek agtertoe</string>
+    <string name="media3_controls_seek_forward_description">Soek vorentoe</string>
+    <string name="media3_controls_seek_to_next_description">Soek tot by volgende item</string>
+    <string name="media3_controls_seek_to_previous_description">Soek tot by vorige item</string>
     <string msgid="7534843523462177008" name="orb_search_action">"Soekhandeling"</string>
     <string msgid="6264217191555673260" name="search_menu_title">"Soek"</string>
     <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>

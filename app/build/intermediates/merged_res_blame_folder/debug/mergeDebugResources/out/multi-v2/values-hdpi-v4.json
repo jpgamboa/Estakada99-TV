@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.estakada99.tv.app-mergeDebugResources-25:/values-hdpi-v4/values-hdpi-v4.xml",
+            "outputFile": "com.estakada99.tv.app-mergeDebugResources-28:/values-hdpi-v4/values-hdpi-v4.xml",
             "map": [
                 {
-                    "source": "/Users/johngamboa/.gradle/caches/9.2.1/transforms/3de327505ac53bbe86ebdb26d7cece77/transformed/appcompat-1.6.1/res/values-hdpi-v4/values-hdpi-v4.xml",
+                    "source": "/Users/johngamboa/.gradle/caches/9.2.1/transforms/4f10a914501f0e1dcc0ee61347547d0c/transformed/appcompat-1.7.0/res/values-hdpi-v4/values-hdpi-v4.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

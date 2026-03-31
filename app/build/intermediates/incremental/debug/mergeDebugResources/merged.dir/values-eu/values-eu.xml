@@ -1,22 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
-    <string-array name="exo_controls_playback_speeds">
-    <item>0,25×</item>
-    <item>0,5×</item>
-    <item>0,75×</item>
-    <item>Normala</item>
-    <item>1,25×</item>
-    <item>1,5×</item>
-    <item>2×</item>
-  </string-array>
-    <plurals name="exo_controls_fastforward_by_amount_description">
-    <item quantity="one">Aurreratu %d segundo</item>
-    <item quantity="other">Aurreratu %d segundo</item>
-  </plurals>
-    <plurals name="exo_controls_rewind_by_amount_description">
-    <item quantity="one">Atzeratu %d segundo</item>
-    <item quantity="other">Atzeratu %d segundo</item>
-  </plurals>
     <string msgid="5976598919945601918" name="abc_action_bar_home_description">"Joan orri nagusira"</string>
     <string msgid="8388173803310557296" name="abc_action_bar_up_description">"Joan gora"</string>
     <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"Aukera gehiago"</string>
@@ -51,30 +34,24 @@
     <string msgid="6107532579223922871" name="call_notification_incoming_text">"Sarrerako deia"</string>
     <string msgid="8623827134497363134" name="call_notification_ongoing_text">"Deia abian da"</string>
     <string msgid="59049573811482460" name="call_notification_screening_text">"Sarrerako dei bat bistaratzen"</string>
-    <string name="exo_controls_cc_disabled_description">Gaitu azpitituluak</string>
-    <string name="exo_controls_cc_enabled_description">Desgaitu azpitituluak</string>
-    <string name="exo_controls_fastforward_description">Aurreratu</string>
-    <string name="exo_controls_fullscreen_enter_description">Erreproduzitu pantaila osoan</string>
-    <string name="exo_controls_fullscreen_exit_description">Irten pantaila osotik</string>
-    <string name="exo_controls_hide">Ezkutatu erreproduzigailua kontrolatzeko aukerak</string>
-    <string name="exo_controls_next_description">Hurrengoa</string>
-    <string name="exo_controls_overflow_hide_description">Ezkutatu ezarpen gehigarriak</string>
-    <string name="exo_controls_overflow_show_description">Erakutsi ezarpen gehigarriak</string>
-    <string name="exo_controls_pause_description">Pausatu</string>
-    <string name="exo_controls_play_description">Erreproduzitu</string>
-    <string name="exo_controls_playback_speed">Abiadura</string>
-    <string name="exo_controls_previous_description">Aurrekoa</string>
-    <string name="exo_controls_repeat_all_description">Oraingo modua: errepikatu guztiak. Aldatu errepikatzeko modua.</string>
-    <string name="exo_controls_repeat_off_description">Oraingo modua: ez errepikatu. Aldatu errepikatzeko modua.</string>
-    <string name="exo_controls_repeat_one_description">Oraingo modua: errepikatu bat. Aldatu errepikatzeko modua.</string>
-    <string name="exo_controls_rewind_description">Atzeratu</string>
-    <string name="exo_controls_seek_bar_description">Erreprodukzioaren garapena</string>
-    <string name="exo_controls_settings_description">Ezarpenak</string>
-    <string name="exo_controls_show">Erakutsi erreproduzigailua kontrolatzeko aukerak</string>
-    <string name="exo_controls_shuffle_off_description">Gaitu ausaz erreproduzitzeko modua</string>
-    <string name="exo_controls_shuffle_on_description">Desgaitu ausaz erreproduzitzeko modua</string>
-    <string name="exo_controls_stop_description">Gelditu</string>
-    <string name="exo_controls_vr_description">EBko modua</string>
+    <string name="default_notification_channel_name">Orain erreproduzitzen</string>
+    <string name="error_message_authentication_expired">Aplikazioa erabiltzeko, hasi saioa</string>
+    <string name="error_message_bad_value">Emandako informazioa ez da zuzena</string>
+    <string name="error_message_concurrent_stream_limit">Gailu gehiegitatik jasotzen ari da soinua</string>
+    <string name="error_message_content_already_playing">Dagoeneko ari da erreproduzitzen eduki hori</string>
+    <string name="error_message_disconnected">Multimedia-aplikaziotik deskonektatu da</string>
+    <string name="error_message_end_of_playlist">Ez dago beste ezer ilaran</string>
+    <string name="error_message_fallback">Arazoren bat izan da. Saiatu geroago.</string>
+    <string name="error_message_info_cancelled">Ezin izan da amaitu ekintza. Saiatu berriro.</string>
+    <string name="error_message_invalid_state">Ezin da egin halakorik une honetan</string>
+    <string name="error_message_io">Emandako informazioaren edo emaitzaren errorea</string>
+    <string name="error_message_not_available_in_region">Ezin da eskuratu eduki hori lurralde honetan</string>
+    <string name="error_message_not_supported">Aplikazio honek ezin du egin halakorik</string>
+    <string name="error_message_parental_control_restricted">Eduki hori blokeatuta dago</string>
+    <string name="error_message_permission_denied">Sarbidea ukatu da</string>
+    <string name="error_message_premium_account_required">Premium-eko sarbidea behar da</string>
+    <string name="error_message_setup_required">Konfiguratu egin behar da</string>
+    <string name="error_message_skip_limit_reached">Ezin da saltatu pista gehiagorik</string>
     <string name="exo_download_completed">Osatu da deskarga</string>
     <string name="exo_download_description">Deskargak</string>
     <string name="exo_download_downloading">Deskargatzen</string>
@@ -84,25 +61,6 @@
     <string name="exo_download_paused_for_network">Deskargak sare mugikorrera konektatzeko zain daude</string>
     <string name="exo_download_paused_for_wifi">Deskargak wifira konektatzeko zain daude</string>
     <string name="exo_download_removing">Deskargak kentzen</string>
-    <string name="exo_item_list">%1$s, %2$s</string>
-    <string name="exo_track_bitrate">%1$.2f Mb/s</string>
-    <string name="exo_track_mono">Monoa</string>
-    <string name="exo_track_resolution">%1$d × %2$d</string>
-    <string name="exo_track_role_alternate">Ordezkoa</string>
-    <string name="exo_track_role_closed_captions">Azpitituluak</string>
-    <string name="exo_track_role_commentary">Iruzkinak</string>
-    <string name="exo_track_role_supplementary">Osagarria</string>
-    <string name="exo_track_selection_auto">Automatikoa</string>
-    <string name="exo_track_selection_none">Bat ere ez</string>
-    <string name="exo_track_selection_title_audio">Audioa</string>
-    <string name="exo_track_selection_title_text">Testua</string>
-    <string name="exo_track_selection_title_video">Bideoa</string>
-    <string name="exo_track_stereo">Estereoa</string>
-    <string name="exo_track_surround">Soinu inguratzailea</string>
-    <string name="exo_track_surround_5_point_1">5.1 soinu inguratzailea</string>
-    <string name="exo_track_surround_7_point_1">7.1 soinu inguratzailea</string>
-    <string name="exo_track_unknown">Ezezaguna</string>
-    <string name="exo_track_unknown_name">Ezezaguna (%1$s)</string>
     <string msgid="2721825378927619928" name="lb_control_display_fast_forward_multiplier">"%1$dX"</string>
     <string msgid="6173753802428649303" name="lb_control_display_rewind_multiplier">"%1$dX"</string>
     <string msgid="1122271825827282965" name="lb_guidedaction_continue_title">"Egin aurrera"</string>
@@ -141,6 +99,12 @@
     <string msgid="2795474673510974502" name="lb_search_bar_hint_speech">"Esan bilatu nahi duzuna"</string>
     <string msgid="7453744869467668159" name="lb_search_bar_hint_with_title">"Bilatu <ns1:g id="SEARCH_CONTEXT">%1$s</ns1:g>"</string>
     <string msgid="5851694095153624617" name="lb_search_bar_hint_with_title_speech">"Hitz egin, bilaketa hemen egiteko: <ns1:g id="SEARCH_CONTEXT">%1$s</ns1:g>"</string>
+    <string name="media3_controls_pause_description">Pausatu</string>
+    <string name="media3_controls_play_description">Erreproduzitu</string>
+    <string name="media3_controls_seek_back_description">Atzeratu</string>
+    <string name="media3_controls_seek_forward_description">Aurreratu</string>
+    <string name="media3_controls_seek_to_next_description">Joan hurrengo elementura</string>
+    <string name="media3_controls_seek_to_previous_description">Joan aurreko elementura</string>
     <string msgid="7534843523462177008" name="orb_search_action">"Bilaketa"</string>
     <string msgid="6264217191555673260" name="search_menu_title">"Bilatu"</string>
     <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>

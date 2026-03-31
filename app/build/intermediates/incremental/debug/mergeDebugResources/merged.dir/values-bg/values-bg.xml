@@ -1,22 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
-    <string-array name="exo_controls_playback_speeds">
-    <item>0,25x</item>
-    <item>0,5x</item>
-    <item>0,75x</item>
-    <item>Нормално</item>
-    <item>1,25x</item>
-    <item>1,5x</item>
-    <item>2x</item>
-  </string-array>
-    <plurals name="exo_controls_fastforward_by_amount_description">
-    <item quantity="one">Превъртане с %d секунда напред</item>
-    <item quantity="other">Превъртане с(ъс) %d секунди напред</item>
-  </plurals>
-    <plurals name="exo_controls_rewind_by_amount_description">
-    <item quantity="one">Превъртане с %d секунда назад</item>
-    <item quantity="other">Превъртане с(ъс) %d секунди назад</item>
-  </plurals>
     <string msgid="5976598919945601918" name="abc_action_bar_home_description">"Навигиране към началния екран"</string>
     <string msgid="8388173803310557296" name="abc_action_bar_up_description">"Навигиране нагоре"</string>
     <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"Още опции"</string>
@@ -51,30 +34,24 @@
     <string msgid="6107532579223922871" name="call_notification_incoming_text">"Входящо обаждане"</string>
     <string msgid="8623827134497363134" name="call_notification_ongoing_text">"Текущо обаждане"</string>
     <string msgid="59049573811482460" name="call_notification_screening_text">"Преглежда се входящо обаждане"</string>
-    <string name="exo_controls_cc_disabled_description">Активиране на субтитрите</string>
-    <string name="exo_controls_cc_enabled_description">Деактивиране на субтитрите</string>
-    <string name="exo_controls_fastforward_description">Превъртане напред</string>
-    <string name="exo_controls_fullscreen_enter_description">Вход в цял екран</string>
-    <string name="exo_controls_fullscreen_exit_description">Изход от цял екран</string>
-    <string name="exo_controls_hide">Скриване на контролите на плейъра</string>
-    <string name="exo_controls_next_description">Напред</string>
-    <string name="exo_controls_overflow_hide_description">Скриване на допълнителните настройки</string>
-    <string name="exo_controls_overflow_show_description">Показване на допълнителните настройки</string>
-    <string name="exo_controls_pause_description">Поставяне на пауза</string>
-    <string name="exo_controls_play_description">Възпроизвеждане</string>
-    <string name="exo_controls_playback_speed">Скорост</string>
-    <string name="exo_controls_previous_description">Назад</string>
-    <string name="exo_controls_repeat_all_description">Текущ режим: Повтар. на всички. Превкл. режима за повтаряне.</string>
-    <string name="exo_controls_repeat_off_description">Текущ режим: Без повтаряне. Превкл. режима за повтаряне.</string>
-    <string name="exo_controls_repeat_one_description">Текущ режим: Повтар. на 1 елемент. Превкл. режима за повтаряне.</string>
-    <string name="exo_controls_rewind_description">Превъртане назад</string>
-    <string name="exo_controls_seek_bar_description">Напредък на възпроизвеждането</string>
-    <string name="exo_controls_settings_description">Настройки</string>
-    <string name="exo_controls_show">Показване на контролите на плейъра</string>
-    <string name="exo_controls_shuffle_off_description">Активиране на режима за разбъркване</string>
-    <string name="exo_controls_shuffle_on_description">Деактивиране на режима за разбъркване</string>
-    <string name="exo_controls_stop_description">Спиране</string>
-    <string name="exo_controls_vr_description">режим за VR</string>
+    <string name="default_notification_channel_name">Възпроизвеждано сега съдържание</string>
+    <string name="error_message_authentication_expired">Влезте в профила си, за да използвате това приложение</string>
+    <string name="error_message_bad_value">Неправилни входни данни</string>
+    <string name="error_message_concurrent_stream_limit">Слуша се на твърде много устройства</string>
+    <string name="error_message_content_already_playing">Това съдържание вече се възпроизвежда</string>
+    <string name="error_message_disconnected">Връзката с медийното приложение е прекъсната</string>
+    <string name="error_message_end_of_playlist">Няма нищо друго в опашката</string>
+    <string name="error_message_fallback">Нещо не е наред. Опитайте по-късно.</string>
+    <string name="error_message_info_cancelled">Не можа да завърши. Опитайте отново.</string>
+    <string name="error_message_invalid_state">Понастоящем тази заявка не може да се изпълни</string>
+    <string name="error_message_io">Грешка във входните/изходните данни</string>
+    <string name="error_message_not_available_in_region">Това съдържание не е налице за региона ви</string>
+    <string name="error_message_not_supported">Приложението не може да изпълни тази заявка</string>
+    <string name="error_message_parental_control_restricted">Това съдържание е блокирано</string>
+    <string name="error_message_permission_denied">Достъпът е отказан</string>
+    <string name="error_message_premium_account_required">За достъп се изисква платен профил</string>
+    <string name="error_message_setup_required">Изисква се настройване</string>
+    <string name="error_message_skip_limit_reached">Не могат да се пропускат повече записи</string>
     <string name="exo_download_completed">Изтеглянето завърши</string>
     <string name="exo_download_description">Изтегляне</string>
     <string name="exo_download_downloading">Изтегля се</string>
@@ -84,25 +61,6 @@
     <string name="exo_download_paused_for_network">Изтеглянията чакат връзка с интернет</string>
     <string name="exo_download_paused_for_wifi">Изтеглянията чакат връзка с Wi-Fi</string>
     <string name="exo_download_removing">Изтеглянията се премахват</string>
-    <string name="exo_item_list">%1$s – %2$s</string>
-    <string name="exo_track_bitrate">%1$.2f Мб/сек</string>
-    <string name="exo_track_mono">Моно</string>
-    <string name="exo_track_resolution">%1$d × %2$d</string>
-    <string name="exo_track_role_alternate">Алтернативен запис</string>
-    <string name="exo_track_role_closed_captions">Субтитри</string>
-    <string name="exo_track_role_commentary">Коментар</string>
-    <string name="exo_track_role_supplementary">Допълнителен запис</string>
-    <string name="exo_track_selection_auto">Автоматично</string>
-    <string name="exo_track_selection_none">Нищо</string>
-    <string name="exo_track_selection_title_audio">Аудиозапис</string>
-    <string name="exo_track_selection_title_text">Текст</string>
-    <string name="exo_track_selection_title_video">Видеозапис</string>
-    <string name="exo_track_stereo">Стерео</string>
-    <string name="exo_track_surround">Обемен звук</string>
-    <string name="exo_track_surround_5_point_1">5,1-канален обемен звук</string>
-    <string name="exo_track_surround_7_point_1">7,1-канален обемен звук</string>
-    <string name="exo_track_unknown">Неизвестно</string>
-    <string name="exo_track_unknown_name">Няма данни (%1$s)</string>
     <string msgid="2721825378927619928" name="lb_control_display_fast_forward_multiplier">"%1$dX"</string>
     <string msgid="6173753802428649303" name="lb_control_display_rewind_multiplier">"%1$dX"</string>
     <string msgid="1122271825827282965" name="lb_guidedaction_continue_title">"Напред"</string>
@@ -141,6 +99,12 @@
     <string msgid="2795474673510974502" name="lb_search_bar_hint_speech">"Търсете с глас"</string>
     <string msgid="7453744869467668159" name="lb_search_bar_hint_with_title">"Търсете в/ъв <ns1:g id="SEARCH_CONTEXT">%1$s</ns1:g>"</string>
     <string msgid="5851694095153624617" name="lb_search_bar_hint_with_title_speech">"Търсете с глас в/ъв <ns1:g id="SEARCH_CONTEXT">%1$s</ns1:g>"</string>
+    <string name="media3_controls_pause_description">Пауза</string>
+    <string name="media3_controls_play_description">Пускане</string>
+    <string name="media3_controls_seek_back_description">Придвижване назад</string>
+    <string name="media3_controls_seek_forward_description">Придвижване напред</string>
+    <string name="media3_controls_seek_to_next_description">Придвижване към следващия елемент</string>
+    <string name="media3_controls_seek_to_previous_description">Придвижване към предишния елемент</string>
     <string msgid="7534843523462177008" name="orb_search_action">"Действие за търсене"</string>
     <string msgid="6264217191555673260" name="search_menu_title">"Търсене"</string>
     <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>

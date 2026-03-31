@@ -1,22 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
-    <string-array name="exo_controls_playback_speeds">
-    <item>0,25x</item>
-    <item>0,5x</item>
-    <item>0,75x</item>
-    <item>Normaali</item>
-    <item>1,25x</item>
-    <item>1,5x</item>
-    <item>2x</item>
-  </string-array>
-    <plurals name="exo_controls_fastforward_by_amount_description">
-    <item quantity="one">Siirry eteenpäin %d sekunti</item>
-    <item quantity="other">Siirry eteenpäin %d sekuntia</item>
-  </plurals>
-    <plurals name="exo_controls_rewind_by_amount_description">
-    <item quantity="one">Siirry taaksepäin %d sekunti</item>
-    <item quantity="other">Siirry taaksepäin %d sekuntia</item>
-  </plurals>
     <string msgid="5976598919945601918" name="abc_action_bar_home_description">"Siirry etusivulle"</string>
     <string msgid="8388173803310557296" name="abc_action_bar_up_description">"Siirry ylös"</string>
     <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"Lisäasetukset"</string>
@@ -51,30 +34,24 @@
     <string msgid="6107532579223922871" name="call_notification_incoming_text">"Saapuva puhelu"</string>
     <string msgid="8623827134497363134" name="call_notification_ongoing_text">"Käynnissä oleva puhelu"</string>
     <string msgid="59049573811482460" name="call_notification_screening_text">"Seulotaan saapuvaa puhelua"</string>
-    <string name="exo_controls_cc_disabled_description">Ota tekstitykset käyttöön</string>
-    <string name="exo_controls_cc_enabled_description">Poista tekstitykset käytöstä</string>
-    <string name="exo_controls_fastforward_description">Kelaa eteenpäin</string>
-    <string name="exo_controls_fullscreen_enter_description">Siirry koko näytön tilaan</string>
-    <string name="exo_controls_fullscreen_exit_description">Sulje koko näytön tila</string>
-    <string name="exo_controls_hide">Näytä soittimen säätimet</string>
-    <string name="exo_controls_next_description">Seuraava</string>
-    <string name="exo_controls_overflow_hide_description">Piilota lisäasetukset</string>
-    <string name="exo_controls_overflow_show_description">Näytä lisäasetukset</string>
-    <string name="exo_controls_pause_description">Keskeytä</string>
-    <string name="exo_controls_play_description">Toista</string>
-    <string name="exo_controls_playback_speed">Nopeus</string>
-    <string name="exo_controls_previous_description">Edellinen</string>
-    <string name="exo_controls_repeat_all_description">Tila: Toista kaikki. Vaihda.</string>
-    <string name="exo_controls_repeat_off_description">Tila: Älä toista. Vaihda.</string>
-    <string name="exo_controls_repeat_one_description">Tila: Toista yksi. Vaihda.</string>
-    <string name="exo_controls_rewind_description">Kelaa taaksepäin</string>
-    <string name="exo_controls_seek_bar_description">Toiston edistyminen</string>
-    <string name="exo_controls_settings_description">Asetukset</string>
-    <string name="exo_controls_show">Näytä soittimen säätimet</string>
-    <string name="exo_controls_shuffle_off_description">Ota satunnaistoisto käyttöön</string>
-    <string name="exo_controls_shuffle_on_description">Poista satunnaistoisto käytöstä</string>
-    <string name="exo_controls_stop_description">Lopeta</string>
-    <string name="exo_controls_vr_description">VR-tila</string>
+    <string name="default_notification_channel_name">Nyt toistetaan</string>
+    <string name="error_message_authentication_expired">Kirjaudu sisään käyttääksesi tätä sovellusta</string>
+    <string name="error_message_bad_value">Virheellinen syötedata</string>
+    <string name="error_message_concurrent_stream_limit">Kuuntelu käynnissä liian monella laitteella</string>
+    <string name="error_message_content_already_playing">Sisältöä toistetaan jo</string>
+    <string name="error_message_disconnected">Yhteys katkaistu mediasovelluksesta</string>
+    <string name="error_message_end_of_playlist">Ei muuta jonossa</string>
+    <string name="error_message_fallback">Jotain meni pieleen. Yritä myöhemmin.</string>
+    <string name="error_message_info_cancelled">Ei onnistunut. Yritä uudelleen.</string>
+    <string name="error_message_invalid_state">Tämä ei juuri nyt onnistu</string>
+    <string name="error_message_io">Syöte‑ tai tuotosvirhe</string>
+    <string name="error_message_not_available_in_region">Sisältö ei ole saatavilla täällä</string>
+    <string name="error_message_not_supported">Sovellus ei tue pyyntöä</string>
+    <string name="error_message_parental_control_restricted">Tämä sisältö on estetty</string>
+    <string name="error_message_permission_denied">Pääsy estetty</string>
+    <string name="error_message_premium_account_required">Edellyttää premium-tilausta</string>
+    <string name="error_message_setup_required">Käyttöönottoa vaaditaan</string>
+    <string name="error_message_skip_limit_reached">Enimmäismäärä kappaleita ohitettu</string>
     <string name="exo_download_completed">Lataus valmis</string>
     <string name="exo_download_description">Lataa</string>
     <string name="exo_download_downloading">Ladataan</string>
@@ -84,25 +61,6 @@
     <string name="exo_download_paused_for_network">Lataukse odottavat verkkoyhteyttä</string>
     <string name="exo_download_paused_for_wifi">Lataukset odottavat Wi-Fi-yhteyttä</string>
     <string name="exo_download_removing">Poistetaan latauksia</string>
-    <string name="exo_item_list">%1$s, %2$s</string>
-    <string name="exo_track_bitrate">%1$.2f Mb/s</string>
-    <string name="exo_track_mono">Mono</string>
-    <string name="exo_track_resolution">%1$d × %2$d</string>
-    <string name="exo_track_role_alternate">Vaihtoehtoinen</string>
-    <string name="exo_track_role_closed_captions">Tekstitykset</string>
-    <string name="exo_track_role_commentary">Kommenttiraita</string>
-    <string name="exo_track_role_supplementary">Lisämateriaali</string>
-    <string name="exo_track_selection_auto">Automaattinen</string>
-    <string name="exo_track_selection_none">–</string>
-    <string name="exo_track_selection_title_audio">Ääni</string>
-    <string name="exo_track_selection_title_text">Teksti</string>
-    <string name="exo_track_selection_title_video">Video</string>
-    <string name="exo_track_stereo">Stereo</string>
-    <string name="exo_track_surround">Surround-ääni</string>
-    <string name="exo_track_surround_5_point_1">5.1-surround-ääni</string>
-    <string name="exo_track_surround_7_point_1">7.1-surround-ääni</string>
-    <string name="exo_track_unknown">Tuntematon</string>
-    <string name="exo_track_unknown_name">Tuntematon (%1$s)</string>
     <string msgid="2721825378927619928" name="lb_control_display_fast_forward_multiplier">"%1$dX"</string>
     <string msgid="6173753802428649303" name="lb_control_display_rewind_multiplier">"%1$dX"</string>
     <string msgid="1122271825827282965" name="lb_guidedaction_continue_title">"Jatka"</string>
@@ -141,6 +99,12 @@
     <string msgid="2795474673510974502" name="lb_search_bar_hint_speech">"Hae puhumalla"</string>
     <string msgid="7453744869467668159" name="lb_search_bar_hint_with_title">"Haku: <ns1:g id="SEARCH_CONTEXT">%1$s</ns1:g>"</string>
     <string msgid="5851694095153624617" name="lb_search_bar_hint_with_title_speech">"Puhehaku: <ns1:g id="SEARCH_CONTEXT">%1$s</ns1:g>"</string>
+    <string name="media3_controls_pause_description">Keskeytä</string>
+    <string name="media3_controls_play_description">Toista</string>
+    <string name="media3_controls_seek_back_description">Siirry taaksepäin</string>
+    <string name="media3_controls_seek_forward_description">Siirry eteenpäin</string>
+    <string name="media3_controls_seek_to_next_description">Siirry seuraavaan</string>
+    <string name="media3_controls_seek_to_previous_description">Siirry edelliseen</string>
     <string msgid="7534843523462177008" name="orb_search_action">"Hakutoiminto"</string>
     <string msgid="6264217191555673260" name="search_menu_title">"Haku"</string>
     <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>

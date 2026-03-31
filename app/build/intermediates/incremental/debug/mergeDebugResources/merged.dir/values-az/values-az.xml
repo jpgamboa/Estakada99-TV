@@ -1,22 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
-    <string-array name="exo_controls_playback_speeds">
-    <item>0.25x</item>
-    <item>0.5x</item>
-    <item>0.75x</item>
-    <item>Normal</item>
-    <item>1.25x</item>
-    <item>1.5x</item>
-    <item>2x</item>
-  </string-array>
-    <plurals name="exo_controls_fastforward_by_amount_description">
-    <item quantity="one">%d saniyə irəli çəkin</item>
-    <item quantity="other">%d saniyə irəli çəkin</item>
-  </plurals>
-    <plurals name="exo_controls_rewind_by_amount_description">
-    <item quantity="one">%d saniyə geri çəkin</item>
-    <item quantity="other">%d saniyə geri çəkin</item>
-  </plurals>
     <string msgid="5976598919945601918" name="abc_action_bar_home_description">"Əsas səhifəyə keçin"</string>
     <string msgid="8388173803310557296" name="abc_action_bar_up_description">"Yuxarı keçin"</string>
     <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"Digər seçimlər"</string>
@@ -51,30 +34,24 @@
     <string msgid="6107532579223922871" name="call_notification_incoming_text">"Gələn zəng"</string>
     <string msgid="8623827134497363134" name="call_notification_ongoing_text">"Davam edən zəng"</string>
     <string msgid="59049573811482460" name="call_notification_screening_text">"Gələn zəng göstərilir"</string>
-    <string name="exo_controls_cc_disabled_description">Subtitrləri aktiv edin</string>
-    <string name="exo_controls_cc_enabled_description">Subtitrləri deaktiv edin</string>
-    <string name="exo_controls_fastforward_description">İrəli çəkin</string>
-    <string name="exo_controls_fullscreen_enter_description">Tam ekrana daxil olun</string>
-    <string name="exo_controls_fullscreen_exit_description">Tam ekrandan çıxın</string>
-    <string name="exo_controls_hide">Oyunçu nəzarətlərini gizlədin</string>
-    <string name="exo_controls_next_description">Sonra</string>
-    <string name="exo_controls_overflow_hide_description">Əlavə ayarları gizlədin</string>
-    <string name="exo_controls_overflow_show_description">Əlavə ayarları göstərin</string>
-    <string name="exo_controls_pause_description">Pauza</string>
-    <string name="exo_controls_play_description">Oxudun</string>
-    <string name="exo_controls_playback_speed">Sürət</string>
-    <string name="exo_controls_previous_description">Əvvəl</string>
-    <string name="exo_controls_repeat_all_description">Cari rejim: Hamısını təkrarlayın. Təkrarlanma rejimini keçirin.</string>
-    <string name="exo_controls_repeat_off_description">Cari rejim: Heç birini təkrarlamayın. Təkrarlanma rejimini keçirin.</string>
-    <string name="exo_controls_repeat_one_description">Cari rejim: Birini təkrarlayın. Təkrarlanma rejimini keçirin.</string>
-    <string name="exo_controls_rewind_description">Geri çəkin</string>
-    <string name="exo_controls_seek_bar_description">Oxutmanın gedişatı</string>
-    <string name="exo_controls_settings_description">Ayarlar</string>
-    <string name="exo_controls_show">Oyunçu nəzarətlərini göstərin</string>
-    <string name="exo_controls_shuffle_off_description">Qarışdırma rejimini aktiv edin</string>
-    <string name="exo_controls_shuffle_on_description">Qarışdırma rejimini deaktiv edin</string>
-    <string name="exo_controls_stop_description">Dayandırın</string>
-    <string name="exo_controls_vr_description">VR rejimi</string>
+    <string name="default_notification_channel_name">İndi oxudulur</string>
+    <string name="error_message_authentication_expired">Bu tətbiqi istifadə etmək üçün daxil olun</string>
+    <string name="error_message_bad_value">Səhv daxiletmə datası</string>
+    <string name="error_message_concurrent_stream_limit">Bir çox cihazda dinlənilir</string>
+    <string name="error_message_content_already_playing">Həmin kontent artıq işə salınıb</string>
+    <string name="error_message_disconnected">Media tətbiqindən ayrıldı</string>
+    <string name="error_message_end_of_playlist">Növbədə heç nə yoxdur</string>
+    <string name="error_message_fallback">Xəta baş verdi. Sonra cəhd edin.</string>
+    <string name="error_message_info_cancelled">Bitirmək mümkün olmadı. Yenidən cəhd edin.</string>
+    <string name="error_message_invalid_state">Hazırda etmək olmur</string>
+    <string name="error_message_io">Daxiletmə/çıxış xətası</string>
+    <string name="error_message_not_available_in_region">Həmin kontenti burada əldə etmək mümkün deyil</string>
+    <string name="error_message_not_supported">Bu tətbiq edə bilmir</string>
+    <string name="error_message_parental_control_restricted">Həmin kontent bloklanıb</string>
+    <string name="error_message_permission_denied">Giriş rədd edildi</string>
+    <string name="error_message_premium_account_required">Premium giriş tələb olunur</string>
+    <string name="error_message_setup_required">Ayarlama tələb olunur</string>
+    <string name="error_message_skip_limit_reached">Başqa trek ötürmək mümkün deyil</string>
     <string name="exo_download_completed">Endirmə tamamlandı</string>
     <string name="exo_download_description">Endirin</string>
     <string name="exo_download_downloading">Endirilir</string>
@@ -84,25 +61,6 @@
     <string name="exo_download_paused_for_network">Endirmələr şəbəkəni gözləyir</string>
     <string name="exo_download_paused_for_wifi">Endirmələr WiFi şəbəkəsini gözləyir</string>
     <string name="exo_download_removing">Endirilənlər silinir</string>
-    <string name="exo_item_list">%1$s, %2$s</string>
-    <string name="exo_track_bitrate">%1$.2f Mbps</string>
-    <string name="exo_track_mono">Mono</string>
-    <string name="exo_track_resolution">%1$d × %2$d</string>
-    <string name="exo_track_role_alternate">Alternativ</string>
-    <string name="exo_track_role_closed_captions">Nüsxəni alan</string>
-    <string name="exo_track_role_commentary">Şərh</string>
-    <string name="exo_track_role_supplementary">Əlavə</string>
-    <string name="exo_track_selection_auto">Avtomatik</string>
-    <string name="exo_track_selection_none">Yoxdur</string>
-    <string name="exo_track_selection_title_audio">Audio</string>
-    <string name="exo_track_selection_title_text">Mətn</string>
-    <string name="exo_track_selection_title_video">Video</string>
-    <string name="exo_track_stereo">Stereo</string>
-    <string name="exo_track_surround">Yüksək səs</string>
-    <string name="exo_track_surround_5_point_1">5.1 yüksək səs</string>
-    <string name="exo_track_surround_7_point_1">7.1 yüksək səs</string>
-    <string name="exo_track_unknown">Naməlum</string>
-    <string name="exo_track_unknown_name">Naməlum (%1$s)</string>
     <string msgid="2721825378927619928" name="lb_control_display_fast_forward_multiplier">"%1$dX"</string>
     <string msgid="6173753802428649303" name="lb_control_display_rewind_multiplier">"%1$dX"</string>
     <string msgid="1122271825827282965" name="lb_guidedaction_continue_title">"Davam edin"</string>
@@ -141,6 +99,12 @@
     <string msgid="2795474673510974502" name="lb_search_bar_hint_speech">"Axtarış üçün danışın"</string>
     <string msgid="7453744869467668159" name="lb_search_bar_hint_with_title">"Axtarın: <ns1:g id="SEARCH_CONTEXT">%1$s</ns1:g>"</string>
     <string msgid="5851694095153624617" name="lb_search_bar_hint_with_title_speech">"Axtarış üçün danışın: <ns1:g id="SEARCH_CONTEXT">%1$s</ns1:g>"</string>
+    <string name="media3_controls_pause_description">Durdurun</string>
+    <string name="media3_controls_play_description">Oxudun</string>
+    <string name="media3_controls_seek_back_description">Geri keçin</string>
+    <string name="media3_controls_seek_forward_description">İrəli keçin</string>
+    <string name="media3_controls_seek_to_next_description">Növbəti elementə keçin</string>
+    <string name="media3_controls_seek_to_previous_description">Əvvəlki elementə keçin</string>
     <string msgid="7534843523462177008" name="orb_search_action">"Axtarış Əməliyyatı"</string>
     <string msgid="6264217191555673260" name="search_menu_title">"Axtarın"</string>
     <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>

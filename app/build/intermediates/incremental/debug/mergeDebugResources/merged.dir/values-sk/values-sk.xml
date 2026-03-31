@@ -1,26 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
-    <string-array name="exo_controls_playback_speeds">
-    <item>0,25 ×</item>
-    <item>0,5 ×</item>
-    <item>0,75 ×</item>
-    <item>Normálne</item>
-    <item>1,25 ×</item>
-    <item>1,5 ×</item>
-    <item>2 ×</item>
-  </string-array>
-    <plurals name="exo_controls_fastforward_by_amount_description">
-    <item quantity="one">Pretočiť dopredu o %d sekundu</item>
-    <item quantity="few">Pretočiť dopredu o %d sekundy</item>
-    <item quantity="many">Pretočiť dopredu o %d sekundy</item>
-    <item quantity="other">Pretočiť dopredu o %d sekúnd</item>
-  </plurals>
-    <plurals name="exo_controls_rewind_by_amount_description">
-    <item quantity="one">Pretočiť späť o %d sekundu</item>
-    <item quantity="few">Pretočiť späť o %d sekundy</item>
-    <item quantity="many">Pretočiť späť o %d sekundy</item>
-    <item quantity="other">Pretočiť späť o %d sekúnd</item>
-  </plurals>
     <string msgid="5976598919945601918" name="abc_action_bar_home_description">"Prejsť na plochu"</string>
     <string msgid="8388173803310557296" name="abc_action_bar_up_description">"Prejsť nahor"</string>
     <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"Ďalšie možnosti"</string>
@@ -55,30 +34,24 @@
     <string msgid="6107532579223922871" name="call_notification_incoming_text">"Prichádzajúci hovor"</string>
     <string msgid="8623827134497363134" name="call_notification_ongoing_text">"Prebiehajúci hovor"</string>
     <string msgid="59049573811482460" name="call_notification_screening_text">"Preveruje sa prichádzajúci hovor"</string>
-    <string name="exo_controls_cc_disabled_description">Povoliť titulky</string>
-    <string name="exo_controls_cc_enabled_description">Zakázať titulky</string>
-    <string name="exo_controls_fastforward_description">Pretočiť dopredu</string>
-    <string name="exo_controls_fullscreen_enter_description">Prejsť do režimu celej obrazovky</string>
-    <string name="exo_controls_fullscreen_exit_description">Ukončiť režim celej obrazovky</string>
-    <string name="exo_controls_hide">Skryť ovládacie prvky prehrávača</string>
-    <string name="exo_controls_next_description">Ďalšia</string>
-    <string name="exo_controls_overflow_hide_description">Skryť ďalšie nastavenia</string>
-    <string name="exo_controls_overflow_show_description">Zobraziť ďalšie nastavenia</string>
-    <string name="exo_controls_pause_description">Pozastaviť</string>
-    <string name="exo_controls_play_description">Prehrať</string>
-    <string name="exo_controls_playback_speed">Rýchlosť</string>
-    <string name="exo_controls_previous_description">Predchádzajúca</string>
-    <string name="exo_controls_repeat_all_description">Aktuálny režim: Opakovať všetky. Prepnúť režim opakovania</string>
-    <string name="exo_controls_repeat_off_description">Aktuálny režim: Neopakovať. Prepnúť režim opakovania</string>
-    <string name="exo_controls_repeat_one_description">Aktuálny režim: Opakovať jedno. Prepnúť režim opakovania</string>
-    <string name="exo_controls_rewind_description">Pretočiť späť</string>
-    <string name="exo_controls_seek_bar_description">Priebeh prehrávania</string>
-    <string name="exo_controls_settings_description">Nastavenia</string>
-    <string name="exo_controls_show">Zobraziť ovládacie prvky prehrávača</string>
-    <string name="exo_controls_shuffle_off_description">Zapnúť režim náhodného prehrávania</string>
-    <string name="exo_controls_shuffle_on_description">Vypnúť režim náhodného prehrávania</string>
-    <string name="exo_controls_stop_description">Zastaviť</string>
-    <string name="exo_controls_vr_description">režim VR</string>
+    <string name="default_notification_channel_name">Prehráva sa</string>
+    <string name="error_message_authentication_expired">Ak chcete použiť túto aplikáciu, prihláste sa</string>
+    <string name="error_message_bad_value">Nesprávne vstupné údaje</string>
+    <string name="error_message_concurrent_stream_limit">Počúva sa na príliš veľa zariadeniach</string>
+    <string name="error_message_content_already_playing">Tento obsah sa už prehráva</string>
+    <string name="error_message_disconnected">Odpojené od prehrávača</string>
+    <string name="error_message_end_of_playlist">Poradie je prázdne</string>
+    <string name="error_message_fallback">Vyskytol sa problém. Skúste to neskôr.</string>
+    <string name="error_message_info_cancelled">Nepodarilo sa dokončiť. Skúste to znova.</string>
+    <string name="error_message_invalid_state">Teraz to nie je možné</string>
+    <string name="error_message_io">Chyba vstupu alebo výstupu</string>
+    <string name="error_message_not_available_in_region">Daný obsah tu nie je k dispozícii</string>
+    <string name="error_message_not_supported">Táto aplikácia to nedokáže</string>
+    <string name="error_message_parental_control_restricted">Daný obsah je blokovaný</string>
+    <string name="error_message_permission_denied">Prístup bol odmietnutý</string>
+    <string name="error_message_premium_account_required">Vyžaduje sa prémiový prístup</string>
+    <string name="error_message_setup_required">Vyžaduje sa nastavenie</string>
+    <string name="error_message_skip_limit_reached">Nie je možné preskočiť žiadne ďalšie skladby</string>
     <string name="exo_download_completed">Sťahovanie bolo dokončené</string>
     <string name="exo_download_description">Stiahnuť</string>
     <string name="exo_download_downloading">Sťahuje sa</string>
@@ -88,25 +61,6 @@
     <string name="exo_download_paused_for_network">Sťahovanie čaká na sieť</string>
     <string name="exo_download_paused_for_wifi">Sťahovanie čaká na Wi‑Fi</string>
     <string name="exo_download_removing">Odstraňuje sa stiahnutý obsah</string>
-    <string name="exo_item_list">%1$s, %2$s</string>
-    <string name="exo_track_bitrate">%1$.2f MB/s</string>
-    <string name="exo_track_mono">Mono</string>
-    <string name="exo_track_resolution">%1$d × %2$d</string>
-    <string name="exo_track_role_alternate">Alternatívna stopa</string>
-    <string name="exo_track_role_closed_captions">Skryté titulky</string>
-    <string name="exo_track_role_commentary">Komentár</string>
-    <string name="exo_track_role_supplementary">Doplnková stopa</string>
-    <string name="exo_track_selection_auto">Automaticky</string>
-    <string name="exo_track_selection_none">Žiadne</string>
-    <string name="exo_track_selection_title_audio">Zvuk</string>
-    <string name="exo_track_selection_title_text">Text</string>
-    <string name="exo_track_selection_title_video">Video</string>
-    <string name="exo_track_stereo">Stereo</string>
-    <string name="exo_track_surround">Priestorový zvuk</string>
-    <string name="exo_track_surround_5_point_1">Priestorový zvuk 5.1</string>
-    <string name="exo_track_surround_7_point_1">Priestorový zvuk 7.1</string>
-    <string name="exo_track_unknown">Neznáme</string>
-    <string name="exo_track_unknown_name">Neznáme (%1$s)</string>
     <string msgid="2721825378927619928" name="lb_control_display_fast_forward_multiplier">"%1$dX"</string>
     <string msgid="6173753802428649303" name="lb_control_display_rewind_multiplier">"%1$dX"</string>
     <string msgid="1122271825827282965" name="lb_guidedaction_continue_title">"Pokračovať"</string>
@@ -145,6 +99,12 @@
     <string msgid="2795474673510974502" name="lb_search_bar_hint_speech">"Hovorením spustíte vyhľadávanie"</string>
     <string msgid="7453744869467668159" name="lb_search_bar_hint_with_title">"Vyhľadať výraz <ns1:g id="SEARCH_CONTEXT">%1$s</ns1:g>"</string>
     <string msgid="5851694095153624617" name="lb_search_bar_hint_with_title_speech">"Vyslovením výrazu <ns1:g id="SEARCH_CONTEXT">%1$s</ns1:g> spustíte jeho vyhľad."</string>
+    <string name="media3_controls_pause_description">Pozastaviť</string>
+    <string name="media3_controls_play_description">Prehrať</string>
+    <string name="media3_controls_seek_back_description">Hľadať smerom dozadu</string>
+    <string name="media3_controls_seek_forward_description">Hľadať smerom dopredu</string>
+    <string name="media3_controls_seek_to_next_description">Hľadať v ďalšej položke</string>
+    <string name="media3_controls_seek_to_previous_description">Hľadať v predchádzajúcej položke</string>
     <string msgid="7534843523462177008" name="orb_search_action">"Akcia vyhľadávania"</string>
     <string msgid="6264217191555673260" name="search_menu_title">"Hľadať"</string>
     <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>

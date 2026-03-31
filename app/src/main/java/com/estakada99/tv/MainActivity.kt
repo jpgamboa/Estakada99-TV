@@ -1,6 +1,10 @@
 package com.estakada99.tv
 
+import android.media.AudioAttributes as AndroidAudioAttributes
+import android.media.AudioFocusRequest
+import android.media.AudioManager
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -15,9 +19,11 @@ import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.media3.common.MediaItem
+import androidx.media3.common.MediaMetadata
 import androidx.media3.common.PlaybackException
 import androidx.media3.common.Player
 import androidx.media3.exoplayer.ExoPlayer
+import androidx.media3.session.MediaSession
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,6 +32,11 @@ class MainActivity : AppCompatActivity() {
     private lateinit var backgroundView: ImageView
     private lateinit var statusText: TextView
     private lateinit var playPauseButton: Button
+
+    private var mediaSession: MediaSession? = null
+    private lateinit var audioManager: AudioManager
+    private var audioFocusRequest: AudioFocusRequest? = null
+    private var hasAudioFocus = false
 
     private val streamUrl = "https://live.e99.live/main"
 
@@ -80,6 +91,63 @@ class MainActivity : AppCompatActivity() {
         hideHandler.postDelayed(hideRunnable, 15000)
     }
 
+    private val audioFocusChangeListener = AudioManager.OnAudioFocusChangeListener { focusChange ->
+        when (focusChange) {
+            AudioManager.AUDIOFOCUS_GAIN -> {
+                hasAudioFocus = true
+                player.playWhenReady = true
+                player.volume = 1f
+            }
+            AudioManager.AUDIOFOCUS_LOSS -> {
+                hasAudioFocus = false
+                player.playWhenReady = false
+            }
+            AudioManager.AUDIOFOCUS_LOSS_TRANSIENT -> {
+                hasAudioFocus = false
+                player.playWhenReady = false
+            }
+            AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK -> {
+                player.volume = 0.3f
+            }
+        }
+    }
+
+    private fun requestAudioFocus(): Boolean {
+        audioManager = getSystemService(AUDIO_SERVICE) as AudioManager
+        val result = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val request = AudioFocusRequest.Builder(AudioManager.AUDIOFOCUS_GAIN)
+                .setAudioAttributes(
+                    AndroidAudioAttributes.Builder()
+                        .setUsage(AndroidAudioAttributes.USAGE_MEDIA)
+                        .setContentType(AndroidAudioAttributes.CONTENT_TYPE_MUSIC)
+                        .build()
+                )
+                .setOnAudioFocusChangeListener(audioFocusChangeListener)
+                .build()
+            audioFocusRequest = request
+            audioManager.requestAudioFocus(request)
+        } else {
+            @Suppress("DEPRECATION")
+            audioManager.requestAudioFocus(
+                audioFocusChangeListener,
+                AudioManager.STREAM_MUSIC,
+                AudioManager.AUDIOFOCUS_GAIN
+            )
+        }
+        hasAudioFocus = result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED
+        return hasAudioFocus
+    }
+
+    private fun abandonAudioFocus() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            audioFocusRequest?.let { audioManager.abandonAudioFocusRequest(it) }
+        } else {
+            @Suppress("DEPRECATION")
+            audioManager.abandonAudioFocus(audioFocusChangeListener)
+        }
+        hasAudioFocus = false
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -115,7 +183,18 @@ class MainActivity : AppCompatActivity() {
     private fun setupPlayer() {
         player = ExoPlayer.Builder(this).build()
 
-        val mediaItem = MediaItem.fromUri(Uri.parse(streamUrl))
+        mediaSession = MediaSession.Builder(this, player).build()
+        requestAudioFocus()
+
+        val mediaItem = MediaItem.Builder()
+            .setUri(Uri.parse(streamUrl))
+            .setMediaMetadata(
+                MediaMetadata.Builder()
+                    .setTitle("Estakada 99")
+                    .setArtist("Live Radio")
+                    .build()
+            )
+            .build()
         player.setMediaItem(mediaItem)
 
         player.addListener(object : Player.Listener {
@@ -223,6 +302,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
+        mediaSession?.release()
+        mediaSession = null
+        abandonAudioFocus()
         player.release()
         bounceHandler.removeCallbacks(bounceRunnable)
         hideHandler.removeCallbacks(hideRunnable)

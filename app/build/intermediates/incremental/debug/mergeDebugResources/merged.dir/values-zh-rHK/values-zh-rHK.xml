@@ -1,22 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
-    <string-array name="exo_controls_playback_speeds">
-    <item>0.25x</item>
-    <item>0.5x</item>
-    <item>0.75x</item>
-    <item>正常</item>
-    <item>1.25x</item>
-    <item>1.5x</item>
-    <item>2x</item>
-  </string-array>
-    <plurals name="exo_controls_fastforward_by_amount_description">
-    <item quantity="one">快轉 %d 秒</item>
-    <item quantity="other">快轉 %d 秒</item>
-  </plurals>
-    <plurals name="exo_controls_rewind_by_amount_description">
-    <item quantity="one">倒帶 %d 秒</item>
-    <item quantity="other">倒帶 %d 秒</item>
-  </plurals>
     <string msgid="5976598919945601918" name="abc_action_bar_home_description">"瀏覽主頁"</string>
     <string msgid="8388173803310557296" name="abc_action_bar_up_description">"向上瀏覽"</string>
     <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"更多選項"</string>
@@ -51,30 +34,24 @@
     <string msgid="6107532579223922871" name="call_notification_incoming_text">"來電"</string>
     <string msgid="8623827134497363134" name="call_notification_ongoing_text">"通話中"</string>
     <string msgid="59049573811482460" name="call_notification_screening_text">"正在過濾來電"</string>
-    <string name="exo_controls_cc_disabled_description">啟用字幕</string>
-    <string name="exo_controls_cc_enabled_description">停用字幕</string>
-    <string name="exo_controls_fastforward_description">向前快轉</string>
-    <string name="exo_controls_fullscreen_enter_description">進入全螢幕</string>
-    <string name="exo_controls_fullscreen_exit_description">關閉全螢幕</string>
-    <string name="exo_controls_hide">隱藏播放器控制項</string>
-    <string name="exo_controls_next_description">繼續</string>
-    <string name="exo_controls_overflow_hide_description">隱藏其他設定</string>
-    <string name="exo_controls_overflow_show_description">顯示其他設定</string>
-    <string name="exo_controls_pause_description">暫停</string>
-    <string name="exo_controls_play_description">播放</string>
-    <string name="exo_controls_playback_speed">速度</string>
-    <string name="exo_controls_previous_description">返回</string>
-    <string name="exo_controls_repeat_all_description">宜家嘅模式：重複播放所有項目。轉做重複播放模式。</string>
-    <string name="exo_controls_repeat_off_description">宜家嘅模式：唔重複播放。轉做重複播放模式。</string>
-    <string name="exo_controls_repeat_one_description">宜家嘅模式：重複播放一個項目。轉做重複播放模式。</string>
-    <string name="exo_controls_rewind_description">倒轉</string>
-    <string name="exo_controls_seek_bar_description">播放進度</string>
-    <string name="exo_controls_settings_description">設定</string>
-    <string name="exo_controls_show">顯示播放器控制項</string>
-    <string name="exo_controls_shuffle_off_description">啟用隨機播放模式</string>
-    <string name="exo_controls_shuffle_on_description">停用隨機播放模式</string>
-    <string name="exo_controls_stop_description">停止</string>
-    <string name="exo_controls_vr_description">虛擬現實模式</string>
+    <string name="default_notification_channel_name">正在播放</string>
+    <string name="error_message_authentication_expired">登入帳戶才能使用此應用程式</string>
+    <string name="error_message_bad_value">輸入資料不正確</string>
+    <string name="error_message_concurrent_stream_limit">同時使用太多裝置收聽內容</string>
+    <string name="error_message_content_already_playing">系統已開始播放該內容</string>
+    <string name="error_message_disconnected">已與媒體應用程式中斷連線</string>
+    <string name="error_message_end_of_playlist">序列上沒有其他項目</string>
+    <string name="error_message_fallback">發生錯誤，請稍後再試。</string>
+    <string name="error_message_info_cancelled">無法完成此操作，請再試一次。</string>
+    <string name="error_message_invalid_state">目前無法執行此操作</string>
+    <string name="error_message_io">輸入/輸出錯誤</string>
+    <string name="error_message_not_available_in_region">所在地區不提供該內容</string>
+    <string name="error_message_not_supported">應用程式不支援此操作</string>
+    <string name="error_message_parental_control_restricted">內容已被封鎖</string>
+    <string name="error_message_permission_denied">拒絕存取</string>
+    <string name="error_message_premium_account_required">必須付費才能存取</string>
+    <string name="error_message_setup_required">需要執行設定</string>
+    <string name="error_message_skip_limit_reached">無法再略過曲目</string>
     <string name="exo_download_completed">下載完畢</string>
     <string name="exo_download_description">下載</string>
     <string name="exo_download_downloading">正在下載</string>
@@ -84,25 +61,6 @@
     <string name="exo_download_paused_for_network">正在等待網絡連線以下載檔案</string>
     <string name="exo_download_paused_for_wifi">正在等待 Wi-Fi 連線以下載檔案</string>
     <string name="exo_download_removing">正在移除下載內容</string>
-    <string name="exo_item_list">%1$s、%2$s</string>
-    <string name="exo_track_bitrate">%1$.2f Mbps</string>
-    <string name="exo_track_mono">單聲道</string>
-    <string name="exo_track_resolution">%1$d × %2$d</string>
-    <string name="exo_track_role_alternate">其他</string>
-    <string name="exo_track_role_closed_captions">字幕</string>
-    <string name="exo_track_role_commentary">評論</string>
-    <string name="exo_track_role_supplementary">附加</string>
-    <string name="exo_track_selection_auto">自動</string>
-    <string name="exo_track_selection_none">無</string>
-    <string name="exo_track_selection_title_audio">音訊</string>
-    <string name="exo_track_selection_title_text">文字</string>
-    <string name="exo_track_selection_title_video">影片</string>
-    <string name="exo_track_stereo">立體聲</string>
-    <string name="exo_track_surround">環迴立體聲</string>
-    <string name="exo_track_surround_5_point_1">5.1 環迴立體聲</string>
-    <string name="exo_track_surround_7_point_1">7.1 環迴立體聲</string>
-    <string name="exo_track_unknown">不明</string>
-    <string name="exo_track_unknown_name">不明 (%1$s)</string>
     <string msgid="2721825378927619928" name="lb_control_display_fast_forward_multiplier">"%1$dX"</string>
     <string msgid="6173753802428649303" name="lb_control_display_rewind_multiplier">"%1$dX"</string>
     <string msgid="1122271825827282965" name="lb_guidedaction_continue_title">"繼續"</string>
@@ -141,6 +99,12 @@
     <string msgid="2795474673510974502" name="lb_search_bar_hint_speech">"使用語音搜尋"</string>
     <string msgid="7453744869467668159" name="lb_search_bar_hint_with_title">"搜尋「<ns1:g id="SEARCH_CONTEXT">%1$s</ns1:g>」"</string>
     <string msgid="5851694095153624617" name="lb_search_bar_hint_with_title_speech">"使用語音搜尋「<ns1:g id="SEARCH_CONTEXT">%1$s</ns1:g>」"</string>
+    <string name="media3_controls_pause_description">暫停</string>
+    <string name="media3_controls_play_description">播放</string>
+    <string name="media3_controls_seek_back_description">後移</string>
+    <string name="media3_controls_seek_forward_description">快轉</string>
+    <string name="media3_controls_seek_to_next_description">跳去下一項</string>
+    <string name="media3_controls_seek_to_previous_description">跳去上一項</string>
     <string msgid="7534843523462177008" name="orb_search_action">"搜尋操作"</string>
     <string msgid="6264217191555673260" name="search_menu_title">"搜尋"</string>
     <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.estakada99.tv.app-mergeDebugResources-25:/values-ldrtl-v17/values-ldrtl-v17.xml",
+            "outputFile": "com.estakada99.tv.app-mergeDebugResources-28:/values-ldrtl-v17/values-ldrtl-v17.xml",
             "map": [
                 {
                     "source": "/Users/johngamboa/.gradle/caches/9.2.1/transforms/3651b46b237583db0c31e83e575e9059/transformed/leanback-1.0.0/res/values-ldrtl-v17/values-ldrtl-v17.xml",

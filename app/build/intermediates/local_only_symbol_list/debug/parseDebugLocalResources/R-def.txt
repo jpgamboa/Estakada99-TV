@@ -1,6 +1,7 @@
 R_DEF: Internal format may change without notice
 local
 anim pulse
+color ic_launcher_background
 drawable background
 drawable banner
 drawable button_focus_selector
@@ -13,4 +14,6 @@ id playPauseButton
 id statusText
 layout activity_main
 mipmap ic_launcher
+mipmap ic_launcher_foreground
+string app_name
 xml network_security_config

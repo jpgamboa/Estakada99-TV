@@ -1,22 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
-    <string-array name="exo_controls_playback_speeds">
-    <item>0,25x</item>
-    <item>0,5x</item>
-    <item>0,75x</item>
-    <item>ჩვეულებრივი</item>
-    <item>1,25x</item>
-    <item>1,5x</item>
-    <item>2x</item>
-  </string-array>
-    <plurals name="exo_controls_fastforward_by_amount_description">
-    <item quantity="one">წინ გადახვევა %d წამით</item>
-    <item quantity="other">წინ გადახვევა %d წამით</item>
-  </plurals>
-    <plurals name="exo_controls_rewind_by_amount_description">
-    <item quantity="one">უკან გადახვევა %d წამით</item>
-    <item quantity="other">უკან გადახვევა %d წამით</item>
-  </plurals>
     <string msgid="5976598919945601918" name="abc_action_bar_home_description">"მთავარზე გადასვლა"</string>
     <string msgid="8388173803310557296" name="abc_action_bar_up_description">"ზემოთ გადასვლა"</string>
     <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"სხვა ვარიანტები"</string>
@@ -51,30 +34,24 @@
     <string msgid="6107532579223922871" name="call_notification_incoming_text">"შემომავალი ზარი"</string>
     <string msgid="8623827134497363134" name="call_notification_ongoing_text">"მიმდინარე ზარი"</string>
     <string msgid="59049573811482460" name="call_notification_screening_text">"შემომავალი ზარების გაცხრილვა"</string>
-    <string name="exo_controls_cc_disabled_description">სუბტიტრების ჩართვა</string>
-    <string name="exo_controls_cc_enabled_description">სუბტიტრების გათიშვა</string>
-    <string name="exo_controls_fastforward_description">წინ გადახვევა</string>
-    <string name="exo_controls_fullscreen_enter_description">სრულეკრანიან რეჟიმში შესვლა</string>
-    <string name="exo_controls_fullscreen_exit_description">სრულეკრანიანი რეჟიმიდან გამოსვლა</string>
-    <string name="exo_controls_hide">დამკვრელის სამართავი ღილაკების დამალვა</string>
-    <string name="exo_controls_next_description">შემდეგ</string>
-    <string name="exo_controls_overflow_hide_description">დამატებითი პარამეტრების დამალვა</string>
-    <string name="exo_controls_overflow_show_description">დამატებითი პარამეტრების ჩვენება</string>
-    <string name="exo_controls_pause_description">პაუზა</string>
-    <string name="exo_controls_play_description">დაკვრა</string>
-    <string name="exo_controls_playback_speed">სიჩქარე</string>
-    <string name="exo_controls_previous_description">წინა</string>
-    <string name="exo_controls_repeat_all_description">მიმდინარე რეჟიმი: ყველას გამეორება. გადართეთ გამეორების რეჟიმი.</string>
-    <string name="exo_controls_repeat_off_description">მიმდინარე რეჟიმი: არაფრის გამეორება. გადართეთ გამეორების რეჟიმი.</string>
-    <string name="exo_controls_repeat_one_description">მიმდინარე რეჟიმი: ერთის გამეორება. გადართეთ გამეორების რეჟიმი.</string>
-    <string name="exo_controls_rewind_description">უკან გადახვევა</string>
-    <string name="exo_controls_seek_bar_description">დაკვრის პროგრესი</string>
-    <string name="exo_controls_settings_description">პარამეტრები</string>
-    <string name="exo_controls_show">დამკვრელის სამართავი ღილაკების ჩვენება</string>
-    <string name="exo_controls_shuffle_off_description">არეულად დაკვრის რეჟიმის ჩართვა</string>
-    <string name="exo_controls_shuffle_on_description">არეულად დაკვრის რეჟიმის გათიშვა</string>
-    <string name="exo_controls_stop_description">შეწყვეტა</string>
-    <string name="exo_controls_vr_description">VR რეჟიმი</string>
+    <string name="default_notification_channel_name">ამჟამად უკრავს</string>
+    <string name="error_message_authentication_expired">ამ აპით სარგებლობისთვის შედით სისტემაში</string>
+    <string name="error_message_bad_value">შეტანილი მონაცემები არასწორია</string>
+    <string name="error_message_concurrent_stream_limit">მოსმენა მიმდინარეობს მეტისმეტად ბევრ მოწყობილობაზე</string>
+    <string name="error_message_content_already_playing">ეს კონტენტი უკვე იკვრება</string>
+    <string name="error_message_disconnected">მედია აპთან კავშირი გაწყვეტილია</string>
+    <string name="error_message_end_of_playlist">რიგში აღარაფერია</string>
+    <string name="error_message_fallback">წარმოიქმნა შეფერხება. ცადეთ მოგვიანებით.</string>
+    <string name="error_message_info_cancelled">დასრულება ვერ მოხერხდა. ცადეთ ხელახლა.</string>
+    <string name="error_message_invalid_state">ამჟამად ამის გაკეთება შეუძლებელია</string>
+    <string name="error_message_io">შეტანილი/გამოტანილი მონაცემების შეცდომა</string>
+    <string name="error_message_not_available_in_region">ამ კონტენტს აქ ვერ მიიღებთ</string>
+    <string name="error_message_not_supported">ეს აპი ამას ვერ გააკეთებს</string>
+    <string name="error_message_parental_control_restricted">ეს კონტენტი დაბლოკილია</string>
+    <string name="error_message_permission_denied">წვდომა უარყოფილია</string>
+    <string name="error_message_premium_account_required">საჭიროა პრემიუმ ტიპის წვდომა</string>
+    <string name="error_message_setup_required">საჭიროა დაყენება</string>
+    <string name="error_message_skip_limit_reached">მეტ ჩანაწერს ვერ გამოტოვებთ</string>
     <string name="exo_download_completed">ჩამოტვირთვა დასრულდა</string>
     <string name="exo_download_description">ჩამოტვირთვა</string>
     <string name="exo_download_downloading">მიმდინარეობს ჩამოტვირთვა</string>
@@ -84,25 +61,6 @@
     <string name="exo_download_paused_for_network">ჩამოტვირთვები ქსელს ელოდება</string>
     <string name="exo_download_paused_for_wifi">ჩამოტვირთვები Wi-Fi-ს ელოდება</string>
     <string name="exo_download_removing">მიმდინარეობს ჩამოტვირთვების ამოშლა</string>
-    <string name="exo_item_list">%1$s, %2$s</string>
-    <string name="exo_track_bitrate">%1$.2f მბიტ/წმ</string>
-    <string name="exo_track_mono">მონო</string>
-    <string name="exo_track_resolution">%1$d × %2$d</string>
-    <string name="exo_track_role_alternate">ალტერნატიული</string>
-    <string name="exo_track_role_closed_captions">დახურული სუბტიტრები</string>
-    <string name="exo_track_role_commentary">კომენტარი</string>
-    <string name="exo_track_role_supplementary">დამატებითი</string>
-    <string name="exo_track_selection_auto">ავტომატური</string>
-    <string name="exo_track_selection_none">არცერთი</string>
-    <string name="exo_track_selection_title_audio">აუდიო</string>
-    <string name="exo_track_selection_title_text">ტექსტი</string>
-    <string name="exo_track_selection_title_video">ვიდეო</string>
-    <string name="exo_track_stereo">სტერეო</string>
-    <string name="exo_track_surround">მოცულობითი ხმა</string>
-    <string name="exo_track_surround_5_point_1">5.1 მოცულობითი ხმა</string>
-    <string name="exo_track_surround_7_point_1">7.1 მოცულობითი ხმა</string>
-    <string name="exo_track_unknown">უცნობი</string>
-    <string name="exo_track_unknown_name">უცნობი (%1$s)</string>
     <string msgid="2721825378927619928" name="lb_control_display_fast_forward_multiplier">"%1$dX"</string>
     <string msgid="6173753802428649303" name="lb_control_display_rewind_multiplier">"%1$dX"</string>
     <string msgid="1122271825827282965" name="lb_guidedaction_continue_title">"გაგრძელება"</string>
@@ -141,6 +99,12 @@
     <string msgid="2795474673510974502" name="lb_search_bar_hint_speech">"თქვით საძიებო ფრაზა"</string>
     <string msgid="7453744869467668159" name="lb_search_bar_hint_with_title">"<ns1:g id="SEARCH_CONTEXT">%1$s</ns1:g>-ის ძიება"</string>
     <string msgid="5851694095153624617" name="lb_search_bar_hint_with_title_speech">"თქვით <ns1:g id="SEARCH_CONTEXT">%1$s</ns1:g>-ის საძიებლად"</string>
+    <string name="media3_controls_pause_description">პაუზა</string>
+    <string name="media3_controls_play_description">დაკვრა</string>
+    <string name="media3_controls_seek_back_description">უკან გადახვევა</string>
+    <string name="media3_controls_seek_forward_description">წინ გადახვევა</string>
+    <string name="media3_controls_seek_to_next_description">შემდეგ ერთეულზე გადახვევა</string>
+    <string name="media3_controls_seek_to_previous_description">წინა ერთეულზე გადახვევა</string>
     <string msgid="7534843523462177008" name="orb_search_action">"ძიების მოქმედება"</string>
     <string msgid="6264217191555673260" name="search_menu_title">"ძიება"</string>
     <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>

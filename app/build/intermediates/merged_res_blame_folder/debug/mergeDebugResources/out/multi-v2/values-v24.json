@@ -1,20 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.estakada99.tv.app-mergeDebugResources-25:/values-v24/values-v24.xml",
+            "outputFile": "com.estakada99.tv.app-mergeDebugResources-28:/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/Users/johngamboa/.gradle/caches/9.2.1/transforms/3de327505ac53bbe86ebdb26d7cece77/transformed/appcompat-1.6.1/res/values-v24/values-v24.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,212",
-                        "endColumns": "156,134",
-                        "endOffsets": "207,342"
-                    }
-                },
-                {
-                    "source": "/Users/johngamboa/.gradle/caches/9.2.1/transforms/cc358c17c802c5b3685159785a6836e0/transformed/media-1.7.0/res/values-v24/values-v24.xml",
+                    "source": "/Users/johngamboa/.gradle/caches/9.2.1/transforms/49c9dfffd21f8c49bbcddd9e6a9bf55e/transformed/jetified-media3-session-1.6.0/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -28,6 +18,16 @@
                         "startOffsets": "347,413,474,540",
                         "endColumns": "65,60,65,66",
                         "endOffsets": "408,469,535,602"
+                    }
+                },
+                {
+                    "source": "/Users/johngamboa/.gradle/caches/9.2.1/transforms/4f10a914501f0e1dcc0ee61347547d0c/transformed/appcompat-1.7.0/res/values-v24/values-v24.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,212",
+                        "endColumns": "156,134",
+                        "endOffsets": "207,342"
                     }
                 }
             ]

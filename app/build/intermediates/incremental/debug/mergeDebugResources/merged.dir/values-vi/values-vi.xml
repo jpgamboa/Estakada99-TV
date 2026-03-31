@@ -1,22 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
-    <string-array name="exo_controls_playback_speeds">
-    <item>0,25x</item>
-    <item>0,5x</item>
-    <item>0,75x</item>
-    <item>Bình thường</item>
-    <item>1,25x</item>
-    <item>1,5x</item>
-    <item>2x</item>
-  </string-array>
-    <plurals name="exo_controls_fastforward_by_amount_description">
-    <item quantity="one">Tua nhanh %d giây</item>
-    <item quantity="other">Tua nhanh %d giây</item>
-  </plurals>
-    <plurals name="exo_controls_rewind_by_amount_description">
-    <item quantity="one">Tua lại %d giây</item>
-    <item quantity="other">Tua lại %d giây</item>
-  </plurals>
     <string msgid="5976598919945601918" name="abc_action_bar_home_description">"Chỉ đường về nhà"</string>
     <string msgid="8388173803310557296" name="abc_action_bar_up_description">"Di chuyển lên"</string>
     <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"Tùy chọn khác"</string>
@@ -51,30 +34,24 @@
     <string msgid="6107532579223922871" name="call_notification_incoming_text">"Cuộc gọi đến"</string>
     <string msgid="8623827134497363134" name="call_notification_ongoing_text">"Cuộc gọi đang thực hiện"</string>
     <string msgid="59049573811482460" name="call_notification_screening_text">"Đang sàng lọc cuộc gọi đến"</string>
-    <string name="exo_controls_cc_disabled_description">Bật phụ đề</string>
-    <string name="exo_controls_cc_enabled_description">Tắt phụ đề</string>
-    <string name="exo_controls_fastforward_description">Tua đi</string>
-    <string name="exo_controls_fullscreen_enter_description">Chuyển sang chế độ toàn màn hình</string>
-    <string name="exo_controls_fullscreen_exit_description">Thoát khỏi chế độ toàn màn hình</string>
-    <string name="exo_controls_hide">Ẩn các nút điều khiển trình phát</string>
-    <string name="exo_controls_next_description">Tiếp theo</string>
-    <string name="exo_controls_overflow_hide_description">Ẩn các tùy chọn cài đặt bổ sung</string>
-    <string name="exo_controls_overflow_show_description">Hiện các tùy chọn cài đặt bổ sung</string>
-    <string name="exo_controls_pause_description">Tạm dừng</string>
-    <string name="exo_controls_play_description">Phát</string>
-    <string name="exo_controls_playback_speed">Tốc độ</string>
-    <string name="exo_controls_previous_description">Trước</string>
-    <string name="exo_controls_repeat_all_description">Chế độ hiện tại: Lặp lại tất cả nội dung. Bật/tắt chế độ lặp lại.</string>
-    <string name="exo_controls_repeat_off_description">Chế độ hiện tại: Không lặp lại. Bật/tắt chế độ lặp lại.</string>
-    <string name="exo_controls_repeat_one_description">Chế độ hiện tại: Lặp lại một nội dung. Bật/tắt chế độ lặp lại.</string>
-    <string name="exo_controls_rewind_description">Tua lại</string>
-    <string name="exo_controls_seek_bar_description">Tiến trình phát</string>
-    <string name="exo_controls_settings_description">Cài đặt</string>
-    <string name="exo_controls_show">Hiển thị các nút điều khiển trình phát</string>
-    <string name="exo_controls_shuffle_off_description">Bật chế độ trộn bài</string>
-    <string name="exo_controls_shuffle_on_description">Tắt chế độ trộn bài</string>
-    <string name="exo_controls_stop_description">Dừng</string>
-    <string name="exo_controls_vr_description">Chế độ thực tế ảo</string>
+    <string name="default_notification_channel_name">Đang phát</string>
+    <string name="error_message_authentication_expired">Hãy đăng nhập để dùng ứng dụng này</string>
+    <string name="error_message_bad_value">Dữ liệu đầu vào không chính xác</string>
+    <string name="error_message_concurrent_stream_limit">Đang nghe trên quá nhiều thiết bị</string>
+    <string name="error_message_content_already_playing">Đang phát nội dung đó</string>
+    <string name="error_message_disconnected">Đã ngắt kết nối khỏi ứng dụng nghe nhìn</string>
+    <string name="error_message_end_of_playlist">Không có nội dung nào khác trong danh sách chờ</string>
+    <string name="error_message_fallback">Đã xảy ra lỗi. Hãy thử lại sau.</string>
+    <string name="error_message_info_cancelled">Không thể hoàn tất hành động. Hãy thử lại.</string>
+    <string name="error_message_invalid_state">Không thực hiện được yêu cầu đó ngay bây giờ</string>
+    <string name="error_message_io">Lỗi đầu vào/đầu ra</string>
+    <string name="error_message_not_available_in_region">Không xem được nội dung đó tại đây</string>
+    <string name="error_message_not_supported">Ứng dụng này không thực hiện được yêu cầu đó</string>
+    <string name="error_message_parental_control_restricted">Nội dung đó đã bị chặn</string>
+    <string name="error_message_permission_denied">Yêu cầu truy cập bị từ chối</string>
+    <string name="error_message_premium_account_required">Cần có tài khoản Premium</string>
+    <string name="error_message_setup_required">Yêu cầu thiết lập</string>
+    <string name="error_message_skip_limit_reached">Không thể bỏ qua bản nhạc nào nữa</string>
     <string name="exo_download_completed">Đã hoàn tất tải xuống</string>
     <string name="exo_download_description">Tải xuống</string>
     <string name="exo_download_downloading">Đang tải xuống</string>
@@ -84,25 +61,6 @@
     <string name="exo_download_paused_for_network">Đang chờ có mạng để tải xuống</string>
     <string name="exo_download_paused_for_wifi">Đang chờ có Wi-Fi để tải xuống</string>
     <string name="exo_download_removing">Đang xóa các mục đã tải xuống</string>
-    <string name="exo_item_list">%1$s, %2$s</string>
-    <string name="exo_track_bitrate">%1$.2f Mb/giây</string>
-    <string name="exo_track_mono">Đơn âm</string>
-    <string name="exo_track_resolution">%1$d × %2$d</string>
-    <string name="exo_track_role_alternate">Thay thế</string>
-    <string name="exo_track_role_closed_captions">Phụ đề</string>
-    <string name="exo_track_role_commentary">Bình luận</string>
-    <string name="exo_track_role_supplementary">Bổ sung</string>
-    <string name="exo_track_selection_auto">Tự động</string>
-    <string name="exo_track_selection_none">Không</string>
-    <string name="exo_track_selection_title_audio">Âm thanh</string>
-    <string name="exo_track_selection_title_text">Văn bản</string>
-    <string name="exo_track_selection_title_video">Video</string>
-    <string name="exo_track_stereo">Âm thanh nổi</string>
-    <string name="exo_track_surround">Âm thanh vòm</string>
-    <string name="exo_track_surround_5_point_1">Âm thanh vòm 5.1</string>
-    <string name="exo_track_surround_7_point_1">Âm thanh vòm 7.1</string>
-    <string name="exo_track_unknown">Không xác định</string>
-    <string name="exo_track_unknown_name">Không xác định (%1$s)</string>
     <string msgid="2721825378927619928" name="lb_control_display_fast_forward_multiplier">"%1$dX"</string>
     <string msgid="6173753802428649303" name="lb_control_display_rewind_multiplier">"%1$dX"</string>
     <string msgid="1122271825827282965" name="lb_guidedaction_continue_title">"Tiếp tục"</string>
@@ -141,6 +99,12 @@
     <string msgid="2795474673510974502" name="lb_search_bar_hint_speech">"Nói để tìm kiếm"</string>
     <string msgid="7453744869467668159" name="lb_search_bar_hint_with_title">"Tìm kiếm <ns1:g id="SEARCH_CONTEXT">%1$s</ns1:g>"</string>
     <string msgid="5851694095153624617" name="lb_search_bar_hint_with_title_speech">"Nói để tìm kiếm <ns1:g id="SEARCH_CONTEXT">%1$s</ns1:g>"</string>
+    <string name="media3_controls_pause_description">Tạm dừng</string>
+    <string name="media3_controls_play_description">Phát</string>
+    <string name="media3_controls_seek_back_description">Tua lại</string>
+    <string name="media3_controls_seek_forward_description">Tua đi</string>
+    <string name="media3_controls_seek_to_next_description">Tua đến mục tiếp theo</string>
+    <string name="media3_controls_seek_to_previous_description">Tua về mục trước</string>
     <string msgid="7534843523462177008" name="orb_search_action">"Tác vụ tìm kiếm"</string>
     <string msgid="6264217191555673260" name="search_menu_title">"Tìm kiếm"</string>
     <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
