@@ -19,11 +19,24 @@ An Android TV app that streams the Estakada 99 live broadcast directly on your T
 ![](estakada_2.png)
 ![](estakada_3.png)
 
-## Installing the App on Your TV (No Computer Needed)
+## Installing the App on Your TV
 
-The easiest way to get the app on your Android TV is to sideload the APK using one of the methods below. No computer or developer tools required.
+### Option 1 — ADB (Wireless, from a Computer)
 
-### Option 1 — Send Files to TV (Wireless, Recommended)
+1. On your TV, go to **Settings > Device Preferences > About** and tap **Build** 7 times to enable Developer Options
+2. Go to **Settings > Device Preferences > Developer Options** and enable **USB Debugging** (or **Network Debugging**)
+3. Note your TV's IP address from **Settings > Network & Internet > Ethernet/Wi-Fi**
+4. On your computer, connect to the TV:
+   ```bash
+   adb connect <TV_IP_ADDRESS>:5555
+   ```
+5. When prompted on the TV, select **Allow** USB debugging
+6. Download the latest `app-release.apk` from the [Releases page](https://github.com/jpgamboa/Estakada99-TV/releases) and install it:
+   ```bash
+   adb install app-release.apk
+   ```
+
+### Option 2 — Send Files to TV (Wireless, No Computer Needed)
 
 1. On your Android TV, install **[Send Files to TV](https://play.google.com/store/apps/details?id=com.yablio.sendfilestotv)** from the Play Store
 2. On your phone or computer, install the same app (Android) or visit the web uploader
@@ -33,7 +46,7 @@ The easiest way to get the app on your Android TV is to sideload the APK using o
 6. Open **Files** (or any file manager on your TV), navigate to Downloads, and tap the APK to install
 7. If prompted, enable **Install from Unknown Sources** for the file manager app
 
-### Option 2 — USB Drive
+### Option 3 — USB Drive
 
 1. Download the latest `app-release.apk` from the [Releases page](https://github.com/jpgamboa/Estakada99-TV/releases) and copy it to a USB drive
 2. Plug the USB drive into your Android TV
