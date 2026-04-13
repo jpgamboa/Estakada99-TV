@@ -2,6 +2,11 @@
 
 An Android TV app that streams the Estakada 99 live broadcast directly on your TV.
 
+### Other platforms
+
+- **Samsung (Tizen)** — [Estakada99-Tizen](https://github.com/jpgamboa/Estakada99-Tizen)
+- **LG (WebOS)** — [Estakada99-WebOS](https://github.com/jpgamboa/Estakada99-WebOS)
+
 ## Features
 
 - Live stream playback via ExoPlayer (AndroidX Media3)
