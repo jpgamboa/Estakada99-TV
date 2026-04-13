@@ -4,24 +4,24 @@
     <!-- Focused (d-pad highlight) -->
     <item android:state_focused="true">
         <shape android:shape="rectangle">
-            <solid android:color="#FFFFFF" />
-            <corners android:radius="8dp" />
+            <solid android:color="@color/e99_accent" />
+            <corners android:radius="9999dp" />
         </shape>
     </item>
 
     <!-- Pressed -->
     <item android:state_pressed="true">
         <shape android:shape="rectangle">
-            <solid android:color="#CCCCCC" />
-            <corners android:radius="8dp" />
+            <solid android:color="@color/e99_accent_hover" />
+            <corners android:radius="9999dp" />
         </shape>
     </item>
 
     <!-- Default -->
     <item>
         <shape android:shape="rectangle">
-            <solid android:color="#66000000" />
-            <corners android:radius="8dp" />
+            <solid android:color="@color/e99_surface" />
+            <corners android:radius="9999dp" />
         </shape>
     </item>
 

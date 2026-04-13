@@ -8,9 +8,9 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.text.Html
 import android.view.KeyEvent
 import android.view.View
-import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
@@ -24,14 +24,21 @@ import androidx.media3.common.PlaybackException
 import androidx.media3.common.Player
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.session.MediaSession
+import org.json.JSONObject
+import java.io.BufferedReader
+import java.io.InputStreamReader
+import java.net.HttpURLConnection
+import java.net.URL
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var player: ExoPlayer
     private lateinit var logoView: ImageView
-    private lateinit var backgroundView: ImageView
+    private lateinit var backgroundView: SkyGradientView
     private lateinit var statusText: TextView
     private lateinit var playPauseButton: Button
+    private lateinit var nowPlayingLabel: TextView
+    private lateinit var nowPlayingText: TextView
 
     private var mediaSession: MediaSession? = null
     private lateinit var audioManager: AudioManager
@@ -39,6 +46,7 @@ class MainActivity : AppCompatActivity() {
     private var hasAudioFocus = false
 
     private val streamUrl = "https://live.e99.live/main"
+    private val liveInfoUrl = "https://bo.e99.live/api/live-info"
 
     // DVD bounce
     private val bounceHandler = Handler(Looper.getMainLooper())
@@ -89,6 +97,15 @@ class MainActivity : AppCompatActivity() {
         playPauseButton.visibility = View.VISIBLE
         playPauseButton.animate().alpha(1f).setDuration(300).start()
         hideHandler.postDelayed(hideRunnable, 15000)
+    }
+
+    // Now-playing poller
+    private val nowPlayingHandler = Handler(Looper.getMainLooper())
+    private val nowPlayingRunnable = object : Runnable {
+        override fun run() {
+            fetchNowPlaying()
+            nowPlayingHandler.postDelayed(this, NOW_PLAYING_POLL_MS)
+        }
     }
 
     private val audioFocusChangeListener = AudioManager.OnAudioFocusChangeListener { focusChange ->
@@ -160,6 +177,8 @@ class MainActivity : AppCompatActivity() {
         backgroundView = findViewById(R.id.backgroundView)
         statusText = findViewById(R.id.statusText)
         playPauseButton = findViewById(R.id.playPauseButton)
+        nowPlayingLabel = findViewById(R.id.nowPlayingLabel)
+        nowPlayingText = findViewById(R.id.nowPlayingText)
 
         logoView.setLayerType(View.LAYER_TYPE_HARDWARE, null)
 
@@ -167,8 +186,8 @@ class MainActivity : AppCompatActivity() {
         playPauseButton.visibility = View.INVISIBLE
         playPauseButton.alpha = 0f
 
-        val pulseAnim = AnimationUtils.loadAnimation(this, R.anim.pulse)
-        backgroundView.startAnimation(pulseAnim)
+        // Enable marquee scrolling for long track names
+        nowPlayingText.isSelected = true
 
         logoView.post {
             bounceHandler.post(bounceRunnable)
@@ -178,6 +197,9 @@ class MainActivity : AppCompatActivity() {
 
         setupPlayer()
         hideSystemUI()
+
+        // Start polling now-playing info
+        nowPlayingHandler.post(nowPlayingRunnable)
     }
 
     private fun setupPlayer() {
@@ -249,6 +271,109 @@ class MainActivity : AppCompatActivity() {
         playPauseButton.text = if (player.isPlaying) "⏸" else "▶"
     }
 
+    // ── Now Playing ──────────────────────────────────────────────
+
+    private fun fetchNowPlaying() {
+        Thread {
+            try {
+                val connection = URL(liveInfoUrl).openConnection() as HttpURLConnection
+                connection.connectTimeout = 8000
+                connection.readTimeout = 8000
+                connection.setRequestProperty("Accept", "application/json")
+
+                val reader = BufferedReader(InputStreamReader(connection.inputStream))
+                val response = reader.readText()
+                reader.close()
+                connection.disconnect()
+
+                val json = JSONObject(response)
+                val result = parseLiveInfo(json)
+
+                runOnUiThread {
+                    if (result != null) {
+                        nowPlayingLabel.text = result.label
+                        nowPlayingText.text = result.text
+                        nowPlayingLabel.visibility = View.VISIBLE
+                        nowPlayingText.visibility = View.VISIBLE
+                    } else {
+                        nowPlayingLabel.visibility = View.GONE
+                        nowPlayingText.visibility = View.GONE
+                    }
+                }
+            } catch (_: Exception) {
+                // Silently fail — will retry on next poll
+            }
+        }.start()
+    }
+
+    private data class NowPlayingInfo(val label: String, val text: String)
+
+    private fun decodeHtmlEntities(text: String): String {
+        @Suppress("DEPRECATION")
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            Html.fromHtml(text, Html.FROM_HTML_MODE_LEGACY).toString()
+        } else {
+            Html.fromHtml(text).toString()
+        }
+    }
+
+    private fun parseLiveInfo(json: JSONObject): NowPlayingInfo? {
+        val current = json.optJSONObject("current") ?: return null
+
+        // Skip jingles — show the next track instead
+        val currentBlob = buildSearchBlob(current)
+        if (currentBlob.contains("JINGLE", ignoreCase = true)) {
+            val next = json.optJSONObject("next")
+            if (next != null) {
+                val line = formatSlot(next)
+                if (line != null) return NowPlayingInfo("Next up:", decodeHtmlEntities(line))
+            }
+            return null
+        }
+
+        val line = formatSlot(current)
+        if (line != null) return NowPlayingInfo("Currently playing:", decodeHtmlEntities(line))
+
+        // Fallback to currentShow name
+        val currentShow = json.optJSONObject("currentShow")
+        val showName = currentShow?.optString("name", "")?.trim()
+        if (!showName.isNullOrEmpty()) {
+            return NowPlayingInfo("Currently playing:", decodeHtmlEntities(showName))
+        }
+
+        return null
+    }
+
+    private fun buildSearchBlob(item: JSONObject): String {
+        val bits = mutableListOf<String>()
+        item.optString("name", "").let { if (it.isNotEmpty()) bits.add(it) }
+        val meta = item.optJSONObject("metadata")
+        if (meta != null) {
+            meta.optString("track_title", "").let { if (it.isNotEmpty()) bits.add(it) }
+            meta.optString("artist_name", "").let { if (it.isNotEmpty()) bits.add(it) }
+        }
+        return bits.joinToString(" ")
+    }
+
+    private fun formatSlot(item: JSONObject): String? {
+        if (item.optString("type") == "track") {
+            val meta = item.optJSONObject("metadata")
+            if (meta != null) {
+                val artist = meta.optString("artist_name", "").trim()
+                val title = meta.optString("track_title", "").trim()
+                if (artist.isNotEmpty() && title.isNotEmpty()) return "$artist \u2013 $title"
+                if (title.isNotEmpty()) return title
+                if (artist.isNotEmpty()) return artist
+            }
+        }
+        val name = item.optString("name", "").trim()
+            .replaceFirst(Regex("^\\s*-\\s+"), "")
+            .trim()
+        return name.ifEmpty { null }
+    }
+
+    // ── System UI ────────────────────────────────────────────────
+
     private fun hideSystemUI() {
         WindowInsetsControllerCompat(window, window.decorView).let { controller ->
             controller.hide(WindowInsetsCompat.Type.systemBars())
@@ -291,6 +416,8 @@ class MainActivity : AppCompatActivity() {
         super.onResume()
         player.playWhenReady = true
         bounceHandler.post(bounceRunnable)
+        backgroundView.startAnimation()
+        nowPlayingHandler.post(nowPlayingRunnable)
     }
 
     override fun onPause() {
@@ -298,6 +425,8 @@ class MainActivity : AppCompatActivity() {
         player.playWhenReady = false
         bounceHandler.removeCallbacks(bounceRunnable)
         hideHandler.removeCallbacks(hideRunnable)
+        backgroundView.stopAnimation()
+        nowPlayingHandler.removeCallbacks(nowPlayingRunnable)
     }
 
     override fun onDestroy() {
@@ -308,5 +437,10 @@ class MainActivity : AppCompatActivity() {
         player.release()
         bounceHandler.removeCallbacks(bounceRunnable)
         hideHandler.removeCallbacks(hideRunnable)
+        nowPlayingHandler.removeCallbacks(nowPlayingRunnable)
+    }
+
+    companion object {
+        private const val NOW_PLAYING_POLL_MS = 30_000L
     }
 }

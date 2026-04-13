@@ -1,4 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="ic_launcher_background">#000000</color>
+
+    <!-- e99 gradient stops -->
+    <color name="e99_gradient_1">#56c1e8</color>
+    <color name="e99_gradient_2">#7ed6f5</color>
+    <color name="e99_gradient_3">#a8e6cf</color>
+    <color name="e99_gradient_4">#f9e4b7</color>
+    <color name="e99_gradient_5">#f7b8a8</color>
+    <color name="e99_gradient_6">#c4a8e8</color>
+    <color name="e99_gradient_7">#82c4f0</color>
+
+    <!-- e99 palette -->
+    <color name="e99_bg">#7ec8e3</color>
+    <color name="e99_text">#1a2a3a</color>
+    <color name="e99_text_muted">#3a5068</color>
+    <color name="e99_text_inverse">#f0f8ff</color>
+    <color name="e99_accent">#d3a89c</color>
+    <color name="e99_accent_hover">#be9286</color>
+    <color name="e99_surface">#59FFFFFF</color>
+    <color name="e99_surface_hover">#94FFFFFF</color>
 </resources>
