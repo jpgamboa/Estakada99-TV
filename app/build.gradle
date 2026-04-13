@@ -59,10 +59,11 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.15.0'
     implementation 'androidx.appcompat:appcompat:1.7.0'
 
-    // Media3 (ExoPlayer) – audio-only, no media3-ui needed
+    // Media3 (ExoPlayer) – audio-only
     implementation 'androidx.media3:media3-exoplayer:1.6.0'
     implementation 'androidx.media3:media3-exoplayer-hls:1.6.0'
     implementation 'androidx.media3:media3-session:1.6.0'
+    implementation 'androidx.media3:media3-ui:1.6.0' // required for drawable resources referenced by media3-session
 
     // Leanback for Android TV
     implementation 'androidx.leanback:leanback:1.0.0'
