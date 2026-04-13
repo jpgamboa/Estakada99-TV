@@ -37,6 +37,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var backgroundView: SkyGradientView
     private lateinit var statusText: TextView
     private lateinit var playPauseButton: Button
+    private lateinit var showNameText: TextView
     private lateinit var nowPlayingLabel: TextView
     private lateinit var nowPlayingText: TextView
 
@@ -177,6 +178,7 @@ class MainActivity : AppCompatActivity() {
         backgroundView = findViewById(R.id.backgroundView)
         statusText = findViewById(R.id.statusText)
         playPauseButton = findViewById(R.id.playPauseButton)
+        showNameText = findViewById(R.id.showNameText)
         nowPlayingLabel = findViewById(R.id.nowPlayingLabel)
         nowPlayingText = findViewById(R.id.nowPlayingText)
 
@@ -291,11 +293,18 @@ class MainActivity : AppCompatActivity() {
 
                 runOnUiThread {
                     if (result != null) {
+                        if (result.showName != null) {
+                            showNameText.text = result.showName
+                            showNameText.visibility = View.VISIBLE
+                        } else {
+                            showNameText.visibility = View.GONE
+                        }
                         nowPlayingLabel.text = result.label
                         nowPlayingText.text = result.text
                         nowPlayingLabel.visibility = View.VISIBLE
                         nowPlayingText.visibility = View.VISIBLE
                     } else {
+                        showNameText.visibility = View.GONE
                         nowPlayingLabel.visibility = View.GONE
                         nowPlayingText.visibility = View.GONE
                     }
@@ -306,7 +315,7 @@ class MainActivity : AppCompatActivity() {
         }.start()
     }
 
-    private data class NowPlayingInfo(val label: String, val text: String)
+    private data class NowPlayingInfo(val showName: String?, val label: String, val text: String)
 
     private fun decodeHtmlEntities(text: String): String {
         @Suppress("DEPRECATION")
@@ -320,25 +329,29 @@ class MainActivity : AppCompatActivity() {
     private fun parseLiveInfo(json: JSONObject): NowPlayingInfo? {
         val current = json.optJSONObject("current") ?: return null
 
+        // Extract show name from currentShow or from track genre metadata
+        val currentShow = json.optJSONObject("currentShow")
+        val rawShowName = currentShow?.optString("name", "")?.trim()
+            ?: current.optJSONObject("metadata")?.optString("genre", "")?.trim()
+        val showName = if (!rawShowName.isNullOrEmpty()) decodeHtmlEntities(rawShowName) else null
+
         // Skip jingles — show the next track instead
         val currentBlob = buildSearchBlob(current)
         if (currentBlob.contains("JINGLE", ignoreCase = true)) {
             val next = json.optJSONObject("next")
             if (next != null) {
                 val line = formatSlot(next)
-                if (line != null) return NowPlayingInfo("Next up:", decodeHtmlEntities(line))
+                if (line != null) return NowPlayingInfo(showName, "Next up:", decodeHtmlEntities(line))
             }
             return null
         }
 
         val line = formatSlot(current)
-        if (line != null) return NowPlayingInfo("Currently playing:", decodeHtmlEntities(line))
+        if (line != null) return NowPlayingInfo(showName, "Currently playing:", decodeHtmlEntities(line))
 
-        // Fallback to currentShow name
-        val currentShow = json.optJSONObject("currentShow")
-        val showName = currentShow?.optString("name", "")?.trim()
-        if (!showName.isNullOrEmpty()) {
-            return NowPlayingInfo("Currently playing:", decodeHtmlEntities(showName))
+        // Fallback to currentShow name as track text
+        if (showName != null) {
+            return NowPlayingInfo(null, "Currently playing:", showName)
         }
 
         return null
