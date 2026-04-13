@@ -1,5 +1,7 @@
 package com.estakada99.tv
 
+import android.graphics.RenderEffect
+import android.graphics.Shader
 import android.media.AudioAttributes as AndroidAudioAttributes
 import android.media.AudioFocusRequest
 import android.media.AudioManager
@@ -13,6 +15,7 @@ import android.view.KeyEvent
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
@@ -40,6 +43,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var showNameText: TextView
     private lateinit var nowPlayingLabel: TextView
     private lateinit var nowPlayingText: TextView
+    private lateinit var nowPlayingContainer: LinearLayout
 
     private var mediaSession: MediaSession? = null
     private lateinit var audioManager: AudioManager
@@ -48,40 +52,6 @@ class MainActivity : AppCompatActivity() {
 
     private val streamUrl = "https://live.e99.live/main"
     private val liveInfoUrl = "https://bo.e99.live/api/live-info"
-
-    // DVD bounce
-    private val bounceHandler = Handler(Looper.getMainLooper())
-    private var logoX = 100f
-    private var logoY = 100f
-    private var dx = 2f
-    private var dy = 1.5f
-
-    private val bounceRunnable = object : Runnable {
-        override fun run() {
-            val parent = logoView.parent as View
-            val maxX = parent.width - logoView.width.toFloat()
-            val maxY = parent.height - logoView.height.toFloat()
-
-            if (maxX <= 0 || maxY <= 0) {
-                bounceHandler.postDelayed(this, 16)
-                return
-            }
-
-            logoX += dx
-            logoY += dy
-
-            if (logoX <= 0f) { logoX = 0f; dx = Math.abs(dx) }
-            if (logoX >= maxX) { logoX = maxX; dx = -Math.abs(dx) }
-            if (logoY <= 0f) { logoY = 0f; dy = Math.abs(dy) }
-            if (logoY >= maxY) { logoY = maxY; dy = -Math.abs(dy) }
-
-            // Use translationX/Y for smoother rendering
-            logoView.translationX = logoX
-            logoView.translationY = logoY
-
-            bounceHandler.postDelayed(this, 16)
-        }
-    }
 
     // Button auto-hide
     private val hideHandler = Handler(Looper.getMainLooper())
@@ -181,8 +151,7 @@ class MainActivity : AppCompatActivity() {
         showNameText = findViewById(R.id.showNameText)
         nowPlayingLabel = findViewById(R.id.nowPlayingLabel)
         nowPlayingText = findViewById(R.id.nowPlayingText)
-
-        logoView.setLayerType(View.LAYER_TYPE_HARDWARE, null)
+        nowPlayingContainer = findViewById(R.id.nowPlayingContainer)
 
         // Start hidden
         playPauseButton.visibility = View.INVISIBLE
@@ -191,9 +160,8 @@ class MainActivity : AppCompatActivity() {
         // Enable marquee scrolling for long track names
         nowPlayingText.isSelected = true
 
-        logoView.post {
-            bounceHandler.post(bounceRunnable)
-        }
+        // Apply background blur for liquid glass effect on API 31+
+        applyGlassBlur()
 
         playPauseButton.setOnClickListener { togglePlayback() }
 
@@ -202,6 +170,20 @@ class MainActivity : AppCompatActivity() {
 
         // Start polling now-playing info
         nowPlayingHandler.post(nowPlayingRunnable)
+    }
+
+    private fun applyGlassBlur() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            val blur = RenderEffect.createBlurEffect(24f, 24f, Shader.TileMode.CLAMP)
+            // Apply blur to the background behind glass panels
+            val logoPanel = findViewById<View>(R.id.logoGlassPanel)
+            logoPanel.setRenderEffect(
+                RenderEffect.createBlurEffect(1f, 1f, Shader.TileMode.CLAMP)
+            )
+            // The glass panels use elevation + semi-transparent bg for the effect
+            // RenderEffect on the panels themselves would blur their content,
+            // so we rely on the drawable + elevation for the frosted look
+        }
     }
 
     private fun setupPlayer() {
@@ -303,10 +285,12 @@ class MainActivity : AppCompatActivity() {
                         nowPlayingText.text = result.text
                         nowPlayingLabel.visibility = View.VISIBLE
                         nowPlayingText.visibility = View.VISIBLE
+                        nowPlayingContainer.visibility = View.VISIBLE
                     } else {
                         showNameText.visibility = View.GONE
                         nowPlayingLabel.visibility = View.GONE
                         nowPlayingText.visibility = View.GONE
+                        nowPlayingContainer.visibility = View.INVISIBLE
                     }
                 }
             } catch (_: Exception) {
@@ -428,7 +412,6 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         player.playWhenReady = true
-        bounceHandler.post(bounceRunnable)
         backgroundView.startAnimation()
         nowPlayingHandler.post(nowPlayingRunnable)
     }
@@ -436,7 +419,6 @@ class MainActivity : AppCompatActivity() {
     override fun onPause() {
         super.onPause()
         player.playWhenReady = false
-        bounceHandler.removeCallbacks(bounceRunnable)
         hideHandler.removeCallbacks(hideRunnable)
         backgroundView.stopAnimation()
         nowPlayingHandler.removeCallbacks(nowPlayingRunnable)
@@ -448,7 +430,6 @@ class MainActivity : AppCompatActivity() {
         mediaSession = null
         abandonAudioFocus()
         player.release()
-        bounceHandler.removeCallbacks(bounceRunnable)
         hideHandler.removeCallbacks(hideRunnable)
         nowPlayingHandler.removeCallbacks(nowPlayingRunnable)
     }

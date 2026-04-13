@@ -10,14 +10,26 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <!-- Bouncing logo - position controlled via translationX/Y in code -->
-    <ImageView
-        android:id="@+id/logoView"
-        android:src="@drawable/logo"
-        android:layout_width="320dp"
-        android:layout_height="80dp"
-        android:scaleType="fitCenter"
-        android:layout_gravity="top|start" />
+    <!-- Logo in glass panel — centered -->
+    <FrameLayout
+        android:id="@+id/logoGlassPanel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/glass_panel"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="24dp"
+        android:elevation="2dp">
+
+        <ImageView
+            android:id="@+id/logoView"
+            android:src="@drawable/logo"
+            android:layout_width="320dp"
+            android:layout_height="80dp"
+            android:scaleType="fitCenter" />
+    </FrameLayout>
 
     <!-- Status / error text -->
     <TextView
@@ -52,16 +64,22 @@
         android:focusableInTouchMode="true"
         android:background="@drawable/button_focus_selector" />
 
-    <!-- Now playing info - bottom left -->
+    <!-- Now playing in glass panel — bottom left -->
     <LinearLayout
         android:id="@+id/nowPlayingContainer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|start"
-        android:layout_marginBottom="28dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="28dp"
         android:orientation="vertical"
-        android:maxWidth="480dp">
+        android:background="@drawable/glass_panel"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:maxWidth="520dp"
+        android:elevation="2dp">
 
         <TextView
             android:id="@+id/showNameText"
@@ -71,10 +89,6 @@
             android:fontFamily="@font/satoshi"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:shadowColor="#20000000"
-            android:shadowDx="0"
-            android:shadowDy="1"
-            android:shadowRadius="2"
             android:visibility="gone" />
 
         <TextView
@@ -84,7 +98,7 @@
             android:text="Currently playing:"
             android:textColor="@color/e99_text_muted"
             android:fontFamily="@font/satoshi"
-            android:textSize="14sp"
+            android:textSize="13sp"
             android:visibility="gone" />
 
         <TextView
@@ -101,28 +115,31 @@
             android:singleLine="true"
             android:focusable="true"
             android:focusableInTouchMode="true"
-            android:shadowColor="#20000000"
-            android:shadowDx="0"
-            android:shadowDy="1"
-            android:shadowRadius="2"
             android:visibility="gone" />
     </LinearLayout>
 
-    <!-- Clock bottom right -->
-    <TextClock
-        android:id="@+id/clockText"
+    <!-- Clock in glass panel — bottom right -->
+    <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_marginBottom="32dp"
-        android:layout_marginEnd="32dp"
-        android:format12Hour="h:mm a"
-        android:textColor="@color/e99_text"
-        android:fontFamily="@font/satoshi"
-        android:textSize="24sp"
-        android:shadowColor="#20000000"
-        android:shadowDx="0"
-        android:shadowDy="1"
-        android:shadowRadius="2" />
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/glass_panel"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:elevation="2dp">
+
+        <TextClock
+            android:id="@+id/clockText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:format12Hour="h:mm a"
+            android:textColor="@color/e99_text"
+            android:fontFamily="@font/satoshi"
+            android:textSize="22sp" />
+    </FrameLayout>
 
 </FrameLayout>
